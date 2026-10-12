@@ -103,7 +103,7 @@
       .x-overlay.is-open li:nth-child(2) a { transition-delay: 0.04s; } .x-overlay.is-open li:nth-child(3) a { transition-delay: 0.08s; } .x-overlay.is-open li:nth-child(4) a { transition-delay: 0.12s; } .x-overlay.is-open li:nth-child(5) a { transition-delay: 0.16s; } .x-overlay.is-open li:nth-child(6) a { transition-delay: 0.2s; } .x-overlay.is-open li:nth-child(7) a { transition-delay: 0.24s; }
       .x-overlay__foot { display: grid; gap: 16px; }
       .x-overlay__foot p { font-size: 14px; color: var(--x-muted-on); margin: 0; }
-      @media (max-width: 1080px) { .x-menu, .x-header .x-cta { display: none; } .x-burger { display: block; } }
+      @media (max-width: 1080px) { .x-menu, .x-header .x-cta, .x-header .x-langwrap { display: none; } .x-burger { display: block; } }
 
       /* hero */
       .x-hero { position: relative; min-height: 100svh; color: var(--x-cream); display: flex; align-items: flex-end; overflow: hidden; background: var(--x-navy); }
@@ -491,7 +491,7 @@
                 <a class="x-btn" href="#/valuation" data-i18n="hero.cta1">Get a free home valuation</a>
                 <a class="x-btn x-btn--line" href="#/listings" data-i18n="hero.cta2">Browse listings</a>
               </div>
-              <p class="x-hero__call x-rv d4">Or call < data-i18n="hero.orcall"> class="x-link x-link--rest" href="tel:7182042828">718-204-2828</a></p>
+              <p class="x-hero__call x-rv d4"><span data-i18n="hero.orcall">Or call</span> <a class="x-link x-link--rest" href="tel:7182042828">718-204-2828</a></p>
             </div>
             <ul class="x-hero__meta x-rv d3" aria-label="At a glance">
               <li><b>48 years</b><span data-i18n="hero.s1l">in Queens</span></li>
