@@ -1288,7 +1288,11 @@
 
         /* header */
         var header = d.getElementById("x-header");
-        var onScroll = function () { header.classList.toggle("is-solid", window.scrollY > 40 || overlay.classList.contains("is-open")); };
+        var onScroll = function () {
+          var pg = d.body.getAttribute("data-page") || "home";
+          var light = pg !== "home" && pg !== "admin";
+          header.classList.toggle("is-solid", window.scrollY > 40 || overlay.classList.contains("is-open") || light);
+        };
         var overlay = d.getElementById("x-overlay");
         window.addEventListener("scroll", onScroll, { passive: true });
         onScroll();
@@ -1474,6 +1478,8 @@
           }
           d.title = TITLES[page];
           d.body.classList.toggle('is-admin', page === 'admin');
+          d.body.setAttribute("data-page", page);
+          window.dispatchEvent(new Event("scroll"));
           if (anchor) {
             setTimeout(function () {
               var el = d.getElementById(anchor);
