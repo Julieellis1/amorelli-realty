@@ -386,6 +386,50 @@
     .x-est__out { display: grid; gap: 10px; padding-top: 8px; border-top: 1px solid var(--x-rule); }
     .x-est__out[hidden] { display: none; }
     .x-est__range { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 600; letter-spacing: -0.01em; }
+  
+    .adm-login-form { display: grid; gap: 18px; margin-top: 28px; }
+    .adm-err { color: #c0392b; }
+    .adm-dim { opacity: .65; }
+    .adm-shell { display: grid; grid-template-columns: 230px 1fr; min-height: 70vh; }
+    .adm-side { background: var(--x-navy); color: var(--x-cream); padding: 28px 20px; display: flex; flex-direction: column; gap: 28px; }
+    .adm-brand b { display: block; letter-spacing: .22em; font-size: .95rem; }
+    .adm-brand span { font-size: .68rem; letter-spacing: .3em; opacity: .6; }
+    .adm-nav { display: grid; gap: 6px; }
+    .adm-nav button { background: none; border: 0; color: inherit; text-align: left; padding: 12px 14px; border-radius: 8px; font: inherit; cursor: pointer; opacity: .75; }
+    .adm-nav button.on, .adm-nav button:hover { background: rgba(255,255,255,.1); opacity: 1; }
+    .adm-side__foot { margin-top: auto; display: grid; gap: 10px; }
+    .adm-link { background: none; border: 0; color: inherit; font: inherit; cursor: pointer; text-align: left; padding: 0; text-decoration: underline; text-underline-offset: 4px; opacity: .8; }
+    .adm-main { padding: clamp(24px, 4vw, 56px); display: grid; gap: 28px; align-content: start; }
+    .adm-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin-top: 24px; }
+    .adm-stat { border: 1px solid var(--x-rule); border-radius: 12px; padding: 20px; display: grid; gap: 6px; }
+    .adm-stat b { font-size: 1.9rem; }
+    .adm-stat span { font-size: .85rem; opacity: .7; }
+    .adm-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    .adm-tablewrap { overflow-x: auto; border: 1px solid var(--x-rule); border-radius: 12px; }
+    .adm-table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+    .adm-table th, .adm-table td { text-align: left; padding: 14px 16px; border-bottom: 1px solid var(--x-rule); vertical-align: middle; }
+    .adm-table th { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; opacity: .6; }
+    .adm-table img { width: 72px; height: 52px; object-fit: cover; border-radius: 6px; display: block; }
+    .adm-pill { display: inline-block; padding: 4px 12px; border-radius: 999px; font-size: .75rem; background: #eee; }
+    .adm-pill--sale { background: #1d3a2a; color: #fff; }
+    .adm-actions { white-space: nowrap; }
+    .adm-actions button, .adm-table button { background: none; border: 1px solid var(--x-rule); border-radius: 8px; padding: 8px 14px; font: inherit; font-size: .82rem; cursor: pointer; margin-right: 8px; }
+    .adm-danger { color: #c0392b; border-color: #c0392b !important; }
+    tr.adm-done td { opacity: .5; }
+    .adm-form { border: 1px solid var(--x-rule); border-radius: 12px; padding: 24px; display: grid; gap: 16px; margin-bottom: 8px; }
+    .adm-form[hidden] { display: none; }
+    .adm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .adm-checks { display: flex; flex-wrap: wrap; gap: 12px 20px; padding: 10px 0; }
+    .adm-checks label { display: inline-flex; gap: 8px; align-items: center; font-size: .92rem; cursor: pointer; }
+    @media (max-width: 760px) {
+      .adm-shell { grid-template-columns: 1fr; }
+      .adm-side { flex-direction: row; align-items: center; flex-wrap: wrap; }
+      .adm-nav { display: flex; flex-wrap: wrap; }
+      .adm-side__foot { margin-top: 0; display: flex; gap: 16px; }
+      .adm-grid { grid-template-columns: 1fr; }
+    }
+  
+    body.is-admin .x-header, body.is-admin .x-foot { display: none; }
   </style>
   </head>
   <body>
@@ -405,6 +449,7 @@
               <li><a href="#/story" data-i18n="nav.story">Our Story</a></li>
               <li><a href="#/team" data-i18n="nav.team">Team</a></li>
               <li><a href="#/contact" data-i18n="nav.contact">Contact</a></li>
+                <li><a href="#/admin">Agent login</a></li>
             </ul>
           </nav>
           <label class="x-langwrap"><span class="x-sr">Language</span><select class="x-langsel" aria-label="Language"></select></label>
@@ -480,6 +525,7 @@
                 <select class="x-select" id="f-hood">
                   <option value="" data-i18n="list.allhood">All neighborhoods</option>
                   <option value="astoria-lic" data-i18n="list.h_astorialic">Astoria / LIC</option>
+                  <option value="whitestone">Whitestone</option>
                   <option value="bayside" data-i18n="list.h_bayside">Bayside</option>
                   <option value="college-point" data-i18n="list.h_collegepoint">College Point</option>
                   <option value="elmhurst" data-i18n="list.h_elmhurst">Elmhurst</option>
@@ -504,33 +550,9 @@
             </form>
 
             <div class="x-cards">
-              <article class="x-card x-rv" data-hood="astoria-lic" data-types="residential multi">
-                <figure class="x-card__media">
-                  <img src="listing-astoria-4family.jpg" alt="Four-family residence at 23-50 31st Drive, Astoria" loading="lazy" />
-                  <span class="x-badge x-badge--sale" data-i18n="list.badge_sale">For Sale</span>
-                </figure>
-                <p class="x-card__price">$1,998,000</p>
-                <h3>23-50 31st Drive, Astoria</h3>
-                <p class="x-card__meta"><span>Four-family residence</span><span>Astoria</span></p>
-              </article>
-              <article class="x-card x-rv d1" data-hood="whitestone" data-types="residential">
-                <figure class="x-card__media">
-                  <img src="listing-whitestone.jpg" alt="Single-family home in Whitestone, Queens" loading="lazy" />
-                  <span class="x-badge" data-i18n="list.badge_sold">Sold</span>
-                </figure>
-                <p class="x-card__price">$2,800,000</p>
-                <h3>Whitestone, Queens</h3>
-                <p class="x-card__meta"><span>Single-family home</span><span>Whitestone</span></p>
-              </article>
-              <article class="x-card x-rv d2" data-hood="astoria-lic" data-types="residential">
-                <figure class="x-card__media">
-                  <img src="listing-lic.jpg" alt="Interior of a four-bedroom residence in Long Island City" loading="lazy" />
-                  <span class="x-badge" data-i18n="list.badge_sold">Sold</span>
-                </figure>
-                <p class="x-card__price">$1,150,000</p>
-                <h3>Long Island City</h3>
-                <p class="x-card__meta"><span>4-bedroom residence</span><span>LIC</span></p>
-              </article>
+              
+              
+              
               <div class="x-empty" id="x-empty" hidden>
                 <p class="x-h3" data-i18n="list.empty">No featured listings match that search.</p>
                 <p class="x-small" data-i18n="list.empty_sub">Our agents know what's coming to market before it's listed.</p>
@@ -1108,6 +1130,107 @@
           </div>
         </section>
 </div>
+
+  <div class="x-page" data-page="admin">
+    <div id="adm-login">
+      <section class="x-sec x-phero">
+        <div class="x-wrap" style="max-width:520px">
+          <p class="x-eyebrow">Staff only</p>
+          <h1 class="x-h2">Agent <em>login.</em></h1>
+          <p class="x-lead">Manage listings and valuation leads. This is a concept preview of the staff dashboard.</p>
+          <form id="adm-loginform" class="adm-login-form">
+            <div class="x-field">
+              <label class="x-label" for="adm-email">Email</label>
+              <input class="x-input" id="adm-email" type="email" autocomplete="username" value="demo@amorellirealty.com" />
+            </div>
+            <div class="x-field">
+              <label class="x-label" for="adm-pass">Password</label>
+              <input class="x-input" id="adm-pass" type="password" autocomplete="current-password" value="amorelli123" />
+            </div>
+            <p class="x-small adm-err" id="adm-err" hidden>Those details didn&apos;t match. Try the demo login below.</p>
+            <button class="x-btn" type="submit">Sign in</button>
+            <p class="x-small adm-dim">Demo login: demo@amorellirealty.com / amorelli123</p>
+          </form>
+        </div>
+      </section>
+    </div>
+    <div id="adm-dash" hidden>
+      <div class="adm-shell">
+        <aside class="adm-side">
+          <p class="adm-brand"><b>AMORELLI</b><span>STAFF</span></p>
+          <nav class="adm-nav" aria-label="Dashboard">
+            <button type="button" data-go="overview" class="on">Overview</button>
+            <button type="button" data-go="listings">Listings</button>
+            <button type="button" data-go="leads">Valuation leads</button>
+          </nav>
+          <div class="adm-side__foot">
+            <a href="#/" class="adm-link">View site</a>
+            <button type="button" id="adm-logout" class="adm-link">Log out</button>
+          </div>
+        </aside>
+        <div class="adm-main">
+          <section data-view="overview">
+            <h2 class="x-h2">Good day, <em>team.</em></h2>
+            <p class="x-lead">Here&apos;s the site at a glance.</p>
+            <div class="adm-stats">
+              <div class="adm-stat"><b id="adm-stat-active">–</b><span>Active listings</span></div>
+              <div class="adm-stat"><b id="adm-stat-leads">–</b><span>New valuation leads</span></div>
+              <div class="adm-stat"><b id="adm-stat-total">–</b><span>Total listings</span></div>
+              <div class="adm-stat"><b id="adm-stat-vol">–</b><span>Listed volume</span></div>
+            </div>
+            <p class="x-small adm-dim">Tip: add a listing under <b>Listings</b> and it appears on the website instantly. <button type="button" id="adm-reset" class="adm-link">Reset demo data</button></p>
+          </section>
+          <section data-view="listings" hidden>
+            <div class="adm-row">
+              <h2 class="x-h2">Listings</h2>
+              <button class="x-btn" type="button" id="adm-add">Add listing</button>
+            </div>
+            <div class="adm-form" id="adm-form" hidden>
+              <h3 class="x-h3" id="adm-form-title">Add listing</h3>
+              <input type="hidden" id="adm-f-id" />
+              <div class="adm-grid">
+                <div class="x-field"><label class="x-label" for="adm-f-price">Price (USD)</label><input class="x-input" id="adm-f-price" inputmode="numeric" placeholder="1998000" /></div>
+                <div class="x-field"><label class="x-label" for="adm-f-status">Status</label><select class="x-select" id="adm-f-status"><option value="sale">For Sale</option><option value="sold">Sold</option></select></div>
+              </div>
+              <div class="x-field"><label class="x-label" for="adm-f-address">Address / title</label><input class="x-input" id="adm-f-address" placeholder="23-50 31st Drive, Astoria" /></div>
+              <div class="adm-grid">
+                <div class="x-field"><label class="x-label" for="adm-f-desc">Description</label><input class="x-input" id="adm-f-desc" placeholder="Four-family residence" /></div>
+                <div class="x-field"><label class="x-label" for="adm-f-hood">Neighborhood</label><select class="x-select" id="adm-f-hood">
+                  <option value="astoria-lic">Astoria / LIC</option><option value="whitestone">Whitestone</option><option value="bayside">Bayside</option><option value="college-point">College Point</option><option value="elmhurst">Elmhurst</option><option value="flushing">Flushing</option><option value="fresh-meadows">Fresh Meadows</option><option value="jackson-heights">Jackson Heights</option><option value="sunnyside">Sunnyside</option><option value="woodside">Woodside</option>
+                </select></div>
+              </div>
+              <div class="x-field"><span class="x-label">Type</span><div class="adm-checks">
+                <label><input type="checkbox" name="types" value="residential" /> Residential</label>
+                <label><input type="checkbox" name="types" value="multi" /> Multi-Family</label>
+                <label><input type="checkbox" name="types" value="commercial" /> Commercial</label>
+                <label><input type="checkbox" name="types" value="condo" /> Condo/Co-op</label>
+                <label><input type="checkbox" name="types" value="rentals" /> Rentals</label>
+                <label><input type="checkbox" name="types" value="land" /> Lots/Land</label>
+              </div></div>
+              <div class="x-field"><label class="x-label" for="adm-f-img">Photo</label><select class="x-select" id="adm-f-img"><option value="listing-astoria-4family.jpg">listing-astoria-4family.jpg</option><option value="listing-whitestone.jpg">listing-whitestone.jpg</option><option value="listing-lic.jpg">listing-lic.jpg</option><option value="hero.jpg">hero.jpg</option><option value="office.jpg">office.jpg</option><option value="thirtieth-avenue.jpg">thirtieth-avenue.jpg</option></select></div>
+              <div class="adm-row">
+                <button class="x-btn" type="button" id="adm-save">Save listing</button>
+                <button class="x-btn x-btn--line" type="button" id="adm-cancel">Cancel</button>
+              </div>
+            </div>
+            <div class="adm-tablewrap"><table class="adm-table">
+              <thead><tr><th></th><th>Listing</th><th>Type</th><th>Area</th><th>Status</th><th></th></tr></thead>
+              <tbody id="adm-rows"></tbody>
+            </table></div>
+          </section>
+          <section data-view="leads" hidden>
+            <h2 class="x-h2">Valuation <em>leads.</em></h2>
+            <p class="x-lead">From the instant estimator and the valuation form. Sample data in this preview.</p>
+            <div class="adm-tablewrap"><table class="adm-table">
+              <thead><tr><th>Contact</th><th>Property</th><th>Estimate</th><th>Date</th><th></th></tr></thead>
+              <tbody id="adm-leads"></tbody>
+            </table></div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </main>
       <footer class="x-foot">
         <div class="x-wrap">
@@ -1320,7 +1443,7 @@
       <script>
       (function () {
         var d = document;
-        var PAGES = ['home', 'buy', 'sell', 'rent', 'commercial', 'story', 'team', 'contact'];
+        var PAGES = ['home', 'buy', 'sell', 'rent', 'commercial', 'story', 'team', 'contact', 'admin'];
         var TITLES = {
           home: "Amorelli Realty \u00b7 Astoria's family brokerage since 1978",
           buy: 'Buy a home in Queens \u00b7 Amorelli Realty',
@@ -1329,7 +1452,8 @@
           commercial: 'Commercial real estate \u00b7 Amorelli Realty',
           story: 'Our story since 1978 \u00b7 Amorelli Realty',
           team: 'Meet the team \u00b7 Amorelli Realty',
-          contact: 'Contact \u00b7 Amorelli Realty'
+          contact: 'Contact \u00b7 Amorelli Realty',
+          admin: 'Staff dashboard \u00b7 Amorelli Realty'
         };
         var ANCHORS = { valuation: 'valuation', listings: 'listings', services: 'services' };
         function route() {
@@ -1348,6 +1472,7 @@
             else links[j].removeAttribute('aria-current');
           }
           d.title = TITLES[page];
+          d.body.classList.toggle('is-admin', page === 'admin');
           if (anchor) {
             setTimeout(function () {
               var el = d.getElementById(anchor);
@@ -1371,7 +1496,6 @@
         if (!form) return;
         var hood = d.getElementById('f-hood');
         var types = Array.prototype.slice.call(form.querySelectorAll('.x-type'));
-        var cards = Array.prototype.slice.call(d.querySelectorAll('.x-card'));
         var count = d.getElementById('x-count');
         var empty = d.getElementById('x-empty');
         var curType = '';
@@ -1389,6 +1513,8 @@
         }
         function apply() {
           var h = hood.value, shown = 0;
+          var cards = Array.prototype.slice.call(d.querySelectorAll('.x-card'));
+          var total = cards.length;
           cards.forEach(function (c) {
             var okH = !h || c.getAttribute('data-hood') === h;
             var okT = !curType || (c.getAttribute('data-types') || '').split(' ').indexOf(curType) >= 0;
@@ -1396,7 +1522,7 @@
             c.hidden = !show;
             if (show) shown++;
           });
-          count.textContent = tpl(shown, cards.length);
+          count.textContent = tpl(shown, total);
           if (empty) empty.hidden = shown !== 0;
         }
         window.__amorelliCount = apply;
@@ -1445,5 +1571,6 @@
       })();
 
     </script>
+      <script src="admin.js"></script>
   </body>
 </html>
