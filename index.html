@@ -363,51 +363,65 @@
         .x-js .x-rv { opacity: 1; transform: none; transition: none; }
         .x-page *, .x-page *::before, .x-page *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
       }
-    </style>
+    
+    .x-notice { padding: .7rem 1rem; color: #f4f1e9; background: #141414; text-align: center; font-size: .71rem; font-weight: 650; letter-spacing: .105em; text-transform: uppercase; }
+  
+    .x-page[data-page] { display: none; }
+    .x-page[data-page].active { display: block; }
+    .x-phero { padding-top: 150px; padding-bottom: 30px; }
+    .x-lead { font-size: 1.15rem; max-width: 620px; margin-top: 18px; opacity: .85; }
+    .x-feats { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; margin-top: 42px; }
+    .x-feat h3 { margin-bottom: 10px; }
+    a.x-svc-link { color: inherit; text-decoration: none; display: block; }
+    a.x-svc-link:hover h3 { text-decoration: underline; }
+    .x-menu a[aria-current="page"] { text-decoration: underline; text-underline-offset: 6px; }
+  </style>
   </head>
   <body>
     <div class="x-page" id="top">
       <a class="x-skip" href="#main">Skip to content</a>
+      <div class="x-notice" role="note">Independent concept preview &middot; not an official or approved business website</div>
       <header class="x-header" id="x-header">
         <div class="x-header__in">
-          <a class="x-mark" href="#top" aria-label="Amorelli Realty, back to top"><b>AMORELLI</b><span>REALTY · EST. 1978</span></a>
+          <a class="x-mark" href="#/" aria-label="Amorelli Realty, back to top"><b>AMORELLI</b><span>REALTY · EST. 1978</span></a>
           <nav aria-label="Primary">
             <ul class="x-menu">
-              <li><a href="#buy">Buy</a></li>
-              <li><a href="#sell">Sell</a></li>
-              <li><a href="#rent">Rent</a></li>
-              <li><a href="#commercial">Commercial</a></li>
-              <li><a href="#story">Our Story</a></li>
-              <li><a href="#team">Team</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="#/buy">Buy</a></li>
+              <li><a href="#/sell">Sell</a></li>
+              <li><a href="#/rent">Rent</a></li>
+              <li><a href="#/commercial">Commercial</a></li>
+              <li><a href="#/story">Our Story</a></li>
+              <li><a href="#/team">Team</a></li>
+              <li><a href="#/contact">Contact</a></li>
             </ul>
           </nav>
-          <a class="x-btn x-cta" href="#valuation">Free Valuation</a>
+          <a class="x-btn x-cta" href="#/valuation">Free Valuation</a>
           <button class="x-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="x-overlay"><span></span><span></span></button>
         </div>
       </header>
       <div class="x-overlay" id="x-overlay" role="dialog" aria-modal="true" aria-label="Menu" hidden>
         <div class="x-overlay__top">
-          <a class="x-mark" href="#top"><b>AMORELLI</b><span>REALTY · EST. 1978</span></a>
+          <a class="x-mark" href="#/"><b>AMORELLI</b><span>REALTY · EST. 1978</span></a>
           <button class="x-close" type="button" aria-label="Close menu">×</button>
         </div>
         <ol>
-          <li><a href="#buy">Buy</a></li>
-          <li><a href="#sell">Sell</a></li>
-          <li><a href="#rent">Rent</a></li>
-          <li><a href="#commercial">Commercial</a></li>
-          <li><a href="#story">Our Story</a></li>
-          <li><a href="#team">Team</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#/buy">Buy</a></li>
+          <li><a href="#/sell">Sell</a></li>
+          <li><a href="#/rent">Rent</a></li>
+          <li><a href="#/commercial">Commercial</a></li>
+          <li><a href="#/story">Our Story</a></li>
+          <li><a href="#/team">Team</a></li>
+          <li><a href="#/contact">Contact</a></li>
         </ol>
         <div class="x-overlay__foot x-on-dark">
-          <a class="x-btn" href="#valuation">Free Valuation</a>
+          <a class="x-btn" href="#/valuation">Free Valuation</a>
           <p>36-01 30th Avenue, Astoria · <a class="x-link x-link--rest" href="tel:7182042828">718-204-2828</a></p>
         </div>
       </div>
 
       <main id="main">
-        <section class="x-hero" aria-labelledby="hero-title">
+<div class="x-page" data-page="home">
+<section class="x-hero" aria-labelledby="hero-title">
           <img class="x-hero__img" src="hero.jpg" alt="Astoria row houses at golden hour" />
           <div class="x-hero__in">
             <div class="x-hero__copy x-on-dark">
@@ -415,8 +429,8 @@
               <h1 class="x-h1 x-rv d1" id="hero-title">Astoria's family brokerage <em>since 1978.</em></h1>
               <p class="x-hero__sub x-rv d2">Voted Queens' Best Real Estate Agency ten years running (2017–2026). Three generations of the Halvatzis family helping Queens buy, sell and rent.</p>
               <div class="x-btns x-rv d3">
-                <a class="x-btn" href="#valuation">Get a free home valuation</a>
-                <a class="x-btn x-btn--line" href="#listings">Browse listings</a>
+                <a class="x-btn" href="#/valuation">Get a free home valuation</a>
+                <a class="x-btn x-btn--line" href="#/listings">Browse listings</a>
               </div>
               <p class="x-hero__call x-rv d4">Or call <a class="x-link x-link--rest" href="tel:7182042828">718-204-2828</a></p>
             </div>
@@ -427,17 +441,16 @@
             </ul>
           </div>
         </section>
-
-        <div class="x-trust" role="region" aria-label="Recognition">
-          <ul>
-            <li><span><strong>10× Best of the Boro</strong>, Best Real Estate Agency 2017–2026</span></li>
-            <li><span><strong>5.0★ on Zillow</strong>, 299 team reviews</span></li>
-            <li><span><strong>275</strong> total sales</span></li>
-            <li><span>Featured in <strong>The Wall Street Journal</strong></span></li>
+<section class="x-dark" aria-label="By the numbers">
+          <ul class="x-stats">
+            <li class="x-rv"><b>1978</b><span>Founded</span></li>
+            <li class="x-rv d1"><b>275</b><span>Total sales</span></li>
+            <li class="x-rv d2"><b>$1.2M</b><span>Average sale</span></li>
+            <li class="x-rv d3"><b>34</b><span>Sales in the last 12 months</span></li>
+            <li class="x-rv d4"><b>10</b><span>Consecutive Best of the Boro wins</span></li>
           </ul>
-        </div>
-
-        <section class="x-sec" id="listings" aria-labelledby="listings-title">
+        </section>
+<section class="x-sec" id="listings" aria-labelledby="listings-title">
           <div class="x-wrap">
             <div class="x-head x-rv">
               <div>
@@ -507,53 +520,17 @@
               <div class="x-empty" id="x-empty" hidden>
                 <p class="x-h3">No featured listings match that search.</p>
                 <p class="x-small">Our agents know what's coming to market before it's listed.</p>
-                <a class="x-btn x-btn--line" href="#contact">Ask about current listings</a>
+                <a class="x-btn x-btn--line" href="#/contact">Ask about current listings</a>
               </div>
             </div>
 
             <div class="x-listfoot">
-              <p>Past closing: <a class="x-link x-link--rest" href="#contact">18-33 41st Street, Astoria — $2,650,000</a></p>
-              <a class="x-btn x-btn--line" href="#contact">Ask about current listings</a>
+              <p>Past closing: <a class="x-link x-link--rest" href="#/contact">18-33 41st Street, Astoria — $2,650,000</a></p>
+              <a class="x-btn x-btn--line" href="#/contact">Ask about current listings</a>
             </div>
           </div>
         </section>
-
-        <section class="x-dark" aria-label="By the numbers">
-          <ul class="x-stats">
-            <li class="x-rv"><b>1978</b><span>Founded</span></li>
-            <li class="x-rv d1"><b>275</b><span>Total sales</span></li>
-            <li class="x-rv d2"><b>$1.2M</b><span>Average sale</span></li>
-            <li class="x-rv d3"><b>34</b><span>Sales in the last 12 months</span></li>
-            <li class="x-rv d4"><b>10</b><span>Consecutive Best of the Boro wins</span></li>
-          </ul>
-        </section>
-        <section class="x-sec" id="story" aria-labelledby="story-title">
-          <div class="x-wrap">
-            <div class="x-story">
-              <figure class="x-story__img x-rv">
-                <img src="office.jpg" alt="Inside the Amorelli Realty office on 30th Avenue" loading="lazy" />
-                <figcaption>The office at 36-01 30th Avenue</figcaption>
-              </figure>
-              <div class="x-story__copy">
-                <p class="x-eyebrow x-rv">01 — Our Story</p>
-                <h2 class="x-h2 x-rv d1" id="story-title">Powerful &amp; proven <em>since 1978.</em></h2>
-                <p class="x-rv d2">Amorelli Realty has been a staple in Astoria, Queens for over 40 years. In 1978 Anita Halvatzis purchased the company and, with the help of her two sons Paul and Jim, grew it into one of the most successful offices in the borough.</p>
-                <p class="x-rv d3">In 1982 Anita had a vision that one day 30th Avenue would be the key central spot of Astoria. That vision has become a reality, with Astoria and LIC now a vibrant, welcoming hub for young professionals and families alike.</p>
-              </div>
-            </div>
-            <ol class="x-tl x-rv" aria-label="Milestones" tabindex="0">
-              <li><b>1978</b><span>Anita Halvatzis purchases Amorelli Realty</span></li>
-              <li><b>1982</b><span>A vision for 30th Avenue</span></li>
-              <li><b>2015</b><span>Featured in The Wall Street Journal: <i>“A Family-Owned Brokerage Holds Its Own”</i></span></li>
-              <li><b>2017</b><span>First Best of the Boro win</span></li>
-              <li><b>~2018</b><span>Nicholas Halvatzis joins, the third generation</span></li>
-              <li><b>2024</b><span>Paul named Best Real Estate Broker</span></li>
-              <li><b>2026</b><span>Tenth consecutive Best of the Boro win</span></li>
-            </ol>
-          </div>
-        </section>
-
-        <section class="x-sec x-sec--cream" id="services" aria-labelledby="services-title">
+<section class="x-sec x-sec--cream" id="services" aria-labelledby="services-title">
           <div class="x-wrap">
             <div class="x-head x-rv">
               <div>
@@ -562,26 +539,26 @@
               </div>
             </div>
             <div class="x-svc">
-              <article id="buy" class="x-rv">
-                <span id="sell" class="x-sr"></span>
+              <a href="#/buy" class="x-rv x-svc-link">
+                
                 <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M5 19 20 6l15 13"/><path d="M9 16v18h22V16"/><path d="M17 34v-9h6v9"/></svg>
                 <small>01</small>
                 <h3 class="x-h3">Residential</h3>
                 <p>Buying and selling homes across Queens, from first apartments to family houses.</p>
-              </article>
+              </a>
               <article class="x-rv d1">
                 <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M4 34V14l8-6 8 6v20"/><path d="M20 34V10l8-5 8 5v24"/><path d="M2 34h36"/><path d="M9 19h6M9 25h6M25 15h6M25 21h6M25 27h6"/></svg>
                 <small>02</small>
                 <h3 class="x-h3">Multi-Family</h3>
                 <p>Owner-occupied one-to-three family homes and investment buildings.</p>
-              </article>
-              <article id="commercial" class="x-rv d2">
+              </a>
+              <a href="#/commercial" class="x-rv d2 x-svc-link">
                 <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M6 15h28v19H6z"/><path d="M4 15l3-8h26l3 8"/><path d="M4 15c0 2 2 4 4 4s4-2 4-4c0 2 2 4 4 4s4-2 4-4c0 2 2 4 4 4s4-2 4-4c0 2 2 4 4 4s4-2 4-4"/><path d="M11 34v-9h7v9M23 24h7v5h-7z"/></svg>
                 <small>03</small>
                 <h3 class="x-h3">Commercial &amp; Mixed-Use</h3>
                 <p>Storefronts, mixed-use buildings and commercial leasing.</p>
-              </article>
-              <article id="rent" class="x-rv d3">
+              </a>
+              <a href="#/rent" class="x-rv d3 x-svc-link">
                 <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="13" cy="20" r="7"/><circle cx="13" cy="20" r="2"/><path d="M20 20h16M30 20v6M35 20v4"/></svg>
                 <small>04</small>
                 <h3 class="x-h3">Rentals &amp; Landlord Services</h3>
@@ -596,8 +573,7 @@
             </div>
           </div>
         </section>
-
-        <section class="x-quote" aria-label="Our open-door policy">
+<section class="x-quote" aria-label="Our open-door policy">
           <img src="thirtieth-avenue.jpg" alt="" id="x-parallax" loading="lazy" />
           <figure class="x-quote__in">
             <blockquote class="x-rv">We have an open-door policy. We're not secret agents.</blockquote>
@@ -605,8 +581,7 @@
             <p class="x-rv d2">Queens is one of the most diverse places in the world, and we take pride in our agents' multilingual ability.</p>
           </figure>
         </section>
-
-        <section class="x-sec x-sec--cream" id="reviews" aria-labelledby="reviews-title">
+<section class="x-sec x-sec--cream" id="reviews" aria-labelledby="reviews-title">
           <div class="x-wrap">
             <div class="x-head x-rv">
               <div>
@@ -643,124 +618,7 @@
             </div>
           </div>
         </section>
-        <section class="x-sec" id="team" aria-labelledby="team-title">
-          <div class="x-wrap">
-            <div class="x-head x-rv">
-              <div>
-                <p class="x-eyebrow">04 — The family &amp; the team</p>
-                <h2 class="x-h2" id="team-title">Three generations, <em>one front door.</em></h2>
-              </div>
-            </div>
-            <div class="x-leads">
-              <article class="x-person x-rv">
-                <div class="x-mono" aria-hidden="true"><span>AH</span></div>
-                <h3>Anita Halvatzis</h3>
-                <p class="x-role">Owner since 1978</p>
-              </article>
-              <article class="x-person x-rv d1">
-                <div class="x-mono" aria-hidden="true"><span>PH</span></div>
-                <h3>Paul Halvatzis</h3>
-                <p class="x-role">Licensed Real Estate Broker</p>
-                <ul>
-                  <li>Best Real Estate Broker 2024–2026</li>
-                  <li><a class="x-link x-link--rest" href="tel:9173743203">917-374-3203</a></li>
-                  <li><a class="x-link x-link--rest" href="mailto:phalvatzis@amorellirealty.com">phalvatzis@amorellirealty.com</a></li>
-                </ul>
-              </article>
-              <article class="x-person x-rv d2">
-                <div class="x-mono" aria-hidden="true"><span>JH</span></div>
-                <h3>Jim Halvatzis</h3>
-                <p class="x-role">Co-Manager</p>
-              </article>
-              <article class="x-person x-rv d3">
-                <div class="x-mono" aria-hidden="true"><span>NH</span></div>
-                <h3>Nicholas Halvatzis</h3>
-                <p class="x-role">Third generation</p>
-                <ul>
-                  <li>Best Real Estate Agent 2024</li>
-                  <li>127 five-star Zillow reviews</li>
-                  <li><a class="x-link x-link--rest" href="mailto:nickhalvatzis@amorellirealty.com">nickhalvatzis@amorellirealty.com</a></li>
-                </ul>
-              </article>
-            </div>
-            <div class="x-agents-h x-rv">
-              <h3 class="x-h3">Our agents</h3>
-              <p class="x-small">Multilingual, and rooted in Queens.</p>
-            </div>
-            <ul class="x-agents x-rv">
-              <li><span class="x-ini" aria-hidden="true">JV</span><span><b>Joseph Vaccaro</b><small>Best Real Estate Agent 2020–2022</small></span></li>
-              <li><span class="x-ini" aria-hidden="true">CH</span><span><b>Christina Halvatzis</b></span></li>
-              <li><span class="x-ini" aria-hidden="true">GP</span><span><b>George Pardalis</b></span></li>
-              <li><span class="x-ini" aria-hidden="true">DD</span><span><b>Dillon DePinto</b></span></li>
-              <li><span class="x-ini" aria-hidden="true">YB</span><span><b>Yianni Bachas</b><small>Rentals &amp; Commercial</small></span></li>
-              <li><span class="x-ini" aria-hidden="true">EZ</span><span><b>Edmond Zhorda</b></span></li>
-              <li><span class="x-ini" aria-hidden="true">FG</span><span><b>Fotios Gerasopoulos</b></span></li>
-              <li><span class="x-ini" aria-hidden="true">JE</span><span><b>Jose Evertz</b></span></li>
-              <li><span class="x-ini" aria-hidden="true">KL</span><span><b>Kleomenis Lagos</b></span></li>
-              <li><span class="x-ini" aria-hidden="true">OS</span><span><b>Orly Sroka</b></span></li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="x-sec x-sec--cream" id="recognition" aria-labelledby="rec-title">
-          <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-            <symbol id="x-laurel" viewBox="0 0 120 120">
-              <g fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round">
-                <path d="M46 104C24 96 12 76 14 50 15 38 20 26 28 18" />
-                <path d="M74 104c22-8 34-28 32-54-1-12-6-24-14-32" />
-                <path d="M46 104c6 2 22 2 28 0" />
-              </g>
-              <g fill="currentColor" opacity=".85">
-                <ellipse cx="22" cy="86" rx="3" ry="8" transform="rotate(-50 22 86)" />
-                <ellipse cx="15" cy="70" rx="3" ry="8" transform="rotate(-25 15 70)" />
-                <ellipse cx="13" cy="54" rx="3" ry="8" transform="rotate(-5 13 54)" />
-                <ellipse cx="16" cy="38" rx="3" ry="7.5" transform="rotate(15 16 38)" />
-                <ellipse cx="23" cy="25" rx="2.8" ry="7" transform="rotate(35 23 25)" />
-                <ellipse cx="98" cy="86" rx="3" ry="8" transform="rotate(50 98 86)" />
-                <ellipse cx="105" cy="70" rx="3" ry="8" transform="rotate(25 105 70)" />
-                <ellipse cx="107" cy="54" rx="3" ry="8" transform="rotate(5 107 54)" />
-                <ellipse cx="104" cy="38" rx="3" ry="7.5" transform="rotate(-15 104 38)" />
-                <ellipse cx="97" cy="25" rx="2.8" ry="7" transform="rotate(-35 97 25)" />
-              </g>
-              <path d="M60 70l2 4 4.5.6-3.3 3 .8 4.4L60 80l-4 2 .8-4.4-3.3-3 4.5-.6z" fill="currentColor" />
-            </symbol>
-          </svg>
-          <div class="x-wrap">
-            <div class="x-head x-rv">
-              <div>
-                <p class="x-eyebrow">05 — Recognition</p>
-                <h2 class="x-h2" id="rec-title">Ten years running, <em>Best of the Boro.</em></h2>
-              </div>
-              <p class="x-lead">Best Real Estate Agency in Queens, every year from 2017 to 2026.</p>
-            </div>
-            <ol class="x-laurels x-rv" aria-label="Best of the Boro wins">
-              <li><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#x-laurel" /></svg><b>2017</b><span>Best of the Boro</span></li>
-              <li><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#x-laurel" /></svg><b>2018</b><span>Best of the Boro</span></li>
-              <li><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#x-laurel" /></svg><b>2019</b><span>Best of the Boro</span></li>
-              <li><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#x-laurel" /></svg><b>2020</b><span>Best of the Boro</span></li>
-              <li><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#x-laurel" /></svg><b>2021</b><span>Best of the Boro</span></li>
-              <li><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#x-laurel" /></svg><b>2022</b><span>Best of the Boro</span></li>
-              <li><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#x-laurel" /></svg><b>2023</b><span>Best of the Boro</span></li>
-              <li><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#x-laurel" /></svg><b>2024</b><span>Best of the Boro</span></li>
-              <li><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#x-laurel" /></svg><b>2025</b><span>Best of the Boro</span></li>
-              <li><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#x-laurel" /></svg><b>2026</b><span>Best of the Boro</span></li>
-            </ol>
-            <ul class="x-press x-rv" aria-label="In the press">
-              <li>The Wall Street Journal</li>
-              <li>The New York Times</li>
-              <li>The Real Deal</li>
-              <li>Curbed NY</li>
-              <li>NY Daily News</li>
-              <li>Queens Gazette</li>
-              <li>QNS</li>
-            </ul>
-            <figure class="x-pull x-rv">
-              <blockquote>“In Astoria, Queens, the Halvatzis family's Amorelli Realty uses its strong community ties to compete against bigger incoming firms.”</blockquote>
-              <figcaption>The Wall Street Journal</figcaption>
-            </figure>
-          </div>
-        </section>
-        <section class="x-sec" id="valuation" aria-labelledby="val-title">
+<section class="x-sec" id="valuation" aria-labelledby="val-title">
           <div class="x-wrap">
             <div class="x-val x-rv">
               <div class="x-val__panel x-on-dark">
@@ -823,8 +681,340 @@
             </div>
           </div>
         </section>
-
-        <section class="x-sec x-sec--cream" id="contact" aria-labelledby="contact-title">
+<section class="x-dark x-close-cta" aria-labelledby="close-title">
+          <div class="x-rv">
+            <p class="x-eyebrow">Amorelli Realty · Est. 1978</p>
+            <h2 class="x-h2" id="close-title">Let's talk about <em>your next move.</em></h2>
+            <div class="x-btns">
+              <a class="x-btn" href="#/valuation">Free valuation</a>
+              <a class="x-btn x-btn--line" href="tel:7182042828">Call 718-204-2828</a>
+            </div>
+          </div>
+        </section>
+</div>
+<div class="x-page" data-page="buy">
+<section class="x-sec x-phero">
+  <div class="x-wrap">
+    <p class="x-eyebrow x-rv">Buying</p>
+    <h1 class="x-h2 x-rv d1">Find your place <em>in Queens.</em></h1>
+    <p class="x-lead x-rv d2">From first apartments to family houses, three generations of the Halvatzis family have helped Queens buy. Tell us what you are looking for, and we will do the legwork.</p>
+  </div>
+</section><section class="x-sec">
+  <div class="x-wrap">
+    <p class="x-eyebrow x-rv">How it works</p>
+    <h2 class="x-h2 x-rv d1">Buying, <em>the personal way.</em></h2>
+    <p class="x-rv d2">Start with our buyer intake: your preferred areas and your price range. We match you to homes worth seeing, arrange the viewings, and walk with you to closing.</p>
+<div class="x-feats">
+  <div class="x-feat x-rv d0">
+    <h3 class="x-h3">Your areas, your budget</h3>
+    <p>Astoria, Long Island City, Bayside, College Point, Elmhurst, Flushing, Fresh Meadows, Jackson Heights, Sunnyside, Woodside: tell us where, and what you can spend.</p>
+  </div>
+  <div class="x-feat x-rv d1">
+    <h3 class="x-h3">An open door, not a sales pitch</h3>
+    <p>“We’re not secret agents. We’re available.” Paul Halvatzis, broker. Call, walk in, or message: a real person answers.</p>
+  </div>
+  <div class="x-feat x-rv d2">
+    <h3 class="x-h3">A team that speaks your language</h3>
+    <p>Queens is one of the most diverse places in the world, and our multilingual agents take pride in meeting every buyer where they are.</p>
+  </div>
+</div>
+  </div>
+</section>
+<section class="x-dark x-close-cta">
+          <div class="x-rv">
+            <p class="x-eyebrow">Amorelli Realty · Est. 1978</p>
+            <h2 class="x-h2">Let's talk about <em>your next move.</em></h2>
+            <div class="x-btns">
+              <a class="x-btn" href="#/valuation">Free valuation</a>
+              <a class="x-btn x-btn--line" href="tel:7182042828">Call 718-204-2828</a>
+            </div>
+          </div>
+        </section>
+</div>
+<div class="x-page" data-page="sell">
+<section class="x-sec x-phero">
+  <div class="x-wrap">
+    <p class="x-eyebrow x-rv">Selling</p>
+    <h1 class="x-h2 x-rv d1">Sell with Queens’ <em>most awarded team.</em></h1>
+    <p class="x-lead x-rv d2">275+ career sales at a $1.2M average price, with 34 sales in the last 12 months. When it is time to sell, that record works for you.</p>
+  </div>
+</section><section class="x-sec">
+  <div class="x-wrap">
+    <p class="x-eyebrow x-rv">What you get</p>
+    <h2 class="x-h2 x-rv d1">A valuation, <em>then a plan.</em></h2>
+    <p class="x-rv d2">Start with a free home valuation. Our seller intake covers property type, bedrooms, baths, lot size and year built, so the number we give you is grounded, not guessed.</p>
+<div class="x-feats">
+  <div class="x-feat x-rv d0">
+    <h3 class="x-h3">Marketed like it matters</h3>
+    <p>Virtual tours, 3-D tours, digital campaigns and classic flyers: your home shown at its best, everywhere buyers look.</p>
+  </div>
+  <div class="x-feat x-rv d1">
+    <h3 class="x-h3">Recent closings</h3>
+    <p>$2,800,000 in Whitestone. $1,150,000 for a Long Island City four-bedroom. $1,998,000 for an Astoria four-family.</p>
+  </div>
+  <div class="x-feat x-rv d2">
+    <h3 class="x-h3">Ten years of trust</h3>
+    <p>Voted Queens’ Best Real Estate Agency ten years running (2017-2026). Sellers choose the name their neighbors already trust.</p>
+  </div>
+</div>
+  </div>
+</section>
+<section class="x-dark x-close-cta">
+          <div class="x-rv">
+            <p class="x-eyebrow">Amorelli Realty · Est. 1978</p>
+            <h2 class="x-h2">Let's talk about <em>your next move.</em></h2>
+            <div class="x-btns">
+              <a class="x-btn" href="#/valuation">Free valuation</a>
+              <a class="x-btn x-btn--line" href="tel:7182042828">Call 718-204-2828</a>
+            </div>
+          </div>
+        </section>
+</div>
+<div class="x-page" data-page="rent">
+<section class="x-sec x-phero">
+  <div class="x-wrap">
+    <p class="x-eyebrow x-rv">Renting</p>
+    <h1 class="x-h2 x-rv d1">Renting, <em>the personal way.</em></h1>
+    <p class="x-lead x-rv d2">Some realtors really care about their neighborhoods. Our renters say it best: working with us feels personal, not corporate.</p>
+  </div>
+</section><section class="x-sec">
+  <div class="x-wrap">
+    <p class="x-eyebrow x-rv">For renters and landlords</p>
+    <h2 class="x-h2 x-rv d1">One office, <em>both sides of the lease.</em></h2>
+    <p class="x-rv d2">Looking for a place, or looking for the right tenant? Either way you get the same open-door team.</p>
+<div class="x-feats">
+  <div class="x-feat x-rv d0">
+    <h3 class="x-h3">For renters</h3>
+    <p>From first contact to lease signing, a real person guides you: viewings, applications and honest answers about every block.</p>
+  </div>
+  <div class="x-feat x-rv d1">
+    <h3 class="x-h3">For landlords</h3>
+    <p>We find qualified tenants for your property, from single-family homes to multi-family buildings, and make the process painless.</p>
+  </div>
+  <div class="x-feat x-rv d2">
+    <h3 class="x-h3">Commercial space too</h3>
+    <p>Need a storefront or commercial unit? Our team leases commercial space across Queens, fast.</p>
+  </div>
+</div>
+  </div>
+</section>
+<section class="x-dark x-close-cta">
+          <div class="x-rv">
+            <p class="x-eyebrow">Amorelli Realty · Est. 1978</p>
+            <h2 class="x-h2">Let's talk about <em>your next move.</em></h2>
+            <div class="x-btns">
+              <a class="x-btn" href="#/valuation">Free valuation</a>
+              <a class="x-btn x-btn--line" href="tel:7182042828">Call 718-204-2828</a>
+            </div>
+          </div>
+        </section>
+</div>
+<div class="x-page" data-page="commercial">
+<section class="x-sec x-phero">
+  <div class="x-wrap">
+    <p class="x-eyebrow x-rv">Commercial</p>
+    <h1 class="x-h2 x-rv d1">Queens commercial, <em>handled by locals.</em></h1>
+    <p class="x-lead x-rv d2">Storefronts, mixed-use buildings, investment properties and commercial leasing: with 48 years of Queens street knowledge behind every deal.</p>
+  </div>
+</section><section class="x-sec">
+  <div class="x-wrap">
+    <p class="x-eyebrow x-rv">What we handle</p>
+    <h2 class="x-h2 x-rv d1">Serious property, <em>serious representation.</em></h2>
+    <p class="x-rv d2">Whether you are buying your first investment building or leasing out commercial space, you get a team that knows these blocks cold.</p>
+<div class="x-feats">
+  <div class="x-feat x-rv d0">
+    <h3 class="x-h3">Investment properties</h3>
+    <p>Buyer and listing representation for multi-family and mixed-use investment properties across Queens.</p>
+  </div>
+  <div class="x-feat x-rv d1">
+    <h3 class="x-h3">Commercial leasing</h3>
+    <p>Storefronts and commercial units, marketed and leased with the same care as our residential listings.</p>
+  </div>
+  <div class="x-feat x-rv d2">
+    <h3 class="x-h3">Landlord services</h3>
+    <p>Tenant placement and leasing support for commercial landlords who want it handled properly.</p>
+  </div>
+</div>
+  </div>
+</section>
+<section class="x-dark x-close-cta">
+          <div class="x-rv">
+            <p class="x-eyebrow">Amorelli Realty · Est. 1978</p>
+            <h2 class="x-h2">Let's talk about <em>your next move.</em></h2>
+            <div class="x-btns">
+              <a class="x-btn" href="#/valuation">Free valuation</a>
+              <a class="x-btn x-btn--line" href="tel:7182042828">Call 718-204-2828</a>
+            </div>
+          </div>
+        </section>
+</div>
+<div class="x-page" data-page="story">
+<section class="x-sec" id="story" aria-labelledby="story-title">
+          <div class="x-wrap">
+            <div class="x-story">
+              <figure class="x-story__img x-rv">
+                <img src="office.jpg" alt="Inside the Amorelli Realty office on 30th Avenue" loading="lazy" />
+                <figcaption>The office at 36-01 30th Avenue</figcaption>
+              </figure>
+              <div class="x-story__copy">
+                <p class="x-eyebrow x-rv">01 — Our Story</p>
+                <h2 class="x-h2 x-rv d1" id="story-title">Powerful &amp; proven <em>since 1978.</em></h2>
+                <p class="x-rv d2">Amorelli Realty has been a staple in Astoria, Queens for over 40 years. In 1978 Anita Halvatzis purchased the company and, with the help of her two sons Paul and Jim, grew it into one of the most successful offices in the borough.</p>
+                <p class="x-rv d3">In 1982 Anita had a vision that one day 30th Avenue would be the key central spot of Astoria. That vision has become a reality, with Astoria and LIC now a vibrant, welcoming hub for young professionals and families alike.</p>
+              </div>
+            </div>
+            <ol class="x-tl x-rv" aria-label="Milestones" tabindex="0">
+              <li><b>1978</b><span>Anita Halvatzis purchases Amorelli Realty</span></li>
+              <li><b>1982</b><span>A vision for 30th Avenue</span></li>
+              <li><b>2015</b><span>Featured in The Wall Street Journal: <i>“A Family-Owned Brokerage Holds Its Own”</i></span></li>
+              <li><b>2017</b><span>First Best of the Boro win</span></li>
+              <li><b>~2018</b><span>Nicholas Halvatzis joins, the third generation</span></li>
+              <li><b>2024</b><span>Paul named Best Real Estate Broker</span></li>
+              <li><b>2026</b><span>Tenth consecutive Best of the Boro win</span></li>
+            </ol>
+          </div>
+        </section>
+<section class="x-sec x-sec--cream" id="recognition" aria-labelledby="rec-title">
+          <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+            <symbol id="x-laurel" viewBox="0 0 120 120">
+              <g fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round">
+                <path d="M46 104C24 96 12 76 14 50 15 38 20 26 28 18" />
+                <path d="M74 104c22-8 34-28 32-54-1-12-6-24-14-32" />
+                <path d="M46 104c6 2 22 2 28 0" />
+              </g>
+              <g fill="currentColor" opacity=".85">
+                <ellipse cx="22" cy="86" rx="3" ry="8" transform="rotate(-50 22 86)" />
+                <ellipse cx="15" cy="70" rx="3" ry="8" transform="rotate(-25 15 70)" />
+                <ellipse cx="13" cy="54" rx="3" ry="8" transform="rotate(-5 13 54)" />
+                <ellipse cx="16" cy="38" rx="3" ry="7.5" transform="rotate(15 16 38)" />
+                <ellipse cx="23" cy="25" rx="2.8" ry="7" transform="rotate(35 23 25)" />
+                <ellipse cx="98" cy="86" rx="3" ry="8" transform="rotate(50 98 86)" />
+                <ellipse cx="105" cy="70" rx="3" ry="8" transform="rotate(25 105 70)" />
+                <ellipse cx="107" cy="54" rx="3" ry="8" transform="rotate(5 107 54)" />
+                <ellipse cx="104" cy="38" rx="3" ry="7.5" transform="rotate(-15 104 38)" />
+                <ellipse cx="97" cy="25" rx="2.8" ry="7" transform="rotate(-35 97 25)" />
+              </g>
+              <path d="M60 70l2 4 4.5.6-3.3 3 .8 4.4L60 80l-4 2 .8-4.4-3.3-3 4.5-.6z" fill="currentColor" />
+            </symbol>
+          </svg>
+          <div class="x-wrap">
+            <div class="x-head x-rv">
+              <div>
+                <p class="x-eyebrow">05 — Recognition</p>
+                <h2 class="x-h2" id="rec-title">Ten years running, <em>Best of the Boro.</em></h2>
+              </div>
+              <p class="x-lead">Best Real Estate Agency in Queens, every year from 2017 to 2026.</p>
+            </div>
+            <ol class="x-laurels x-rv" aria-label="Best of the Boro wins">
+              <li><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#x-laurel" /></svg><b>2017</b><span>Best of the Boro</span></li>
+              <li><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#x-laurel" /></svg><b>2018</b><span>Best of the Boro</span></li>
+              <li><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#x-laurel" /></svg><b>2019</b><span>Best of the Boro</span></li>
+              <li><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#x-laurel" /></svg><b>2020</b><span>Best of the Boro</span></li>
+              <li><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#x-laurel" /></svg><b>2021</b><span>Best of the Boro</span></li>
+              <li><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#x-laurel" /></svg><b>2022</b><span>Best of the Boro</span></li>
+              <li><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#x-laurel" /></svg><b>2023</b><span>Best of the Boro</span></li>
+              <li><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#x-laurel" /></svg><b>2024</b><span>Best of the Boro</span></li>
+              <li><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#x-laurel" /></svg><b>2025</b><span>Best of the Boro</span></li>
+              <li><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#x-laurel" /></svg><b>2026</b><span>Best of the Boro</span></li>
+            </ol>
+            <ul class="x-press x-rv" aria-label="In the press">
+              <li>The Wall Street Journal</li>
+              <li>The New York Times</li>
+              <li>The Real Deal</li>
+              <li>Curbed NY</li>
+              <li>NY Daily News</li>
+              <li>Queens Gazette</li>
+              <li>QNS</li>
+            </ul>
+            <figure class="x-pull x-rv">
+              <blockquote>“In Astoria, Queens, the Halvatzis family's Amorelli Realty uses its strong community ties to compete against bigger incoming firms.”</blockquote>
+              <figcaption>The Wall Street Journal</figcaption>
+            </figure>
+          </div>
+        </section>
+<section class="x-dark x-close-cta">
+          <div class="x-rv">
+            <p class="x-eyebrow">Amorelli Realty · Est. 1978</p>
+            <h2 class="x-h2">Let's talk about <em>your next move.</em></h2>
+            <div class="x-btns">
+              <a class="x-btn" href="#/valuation">Free valuation</a>
+              <a class="x-btn x-btn--line" href="tel:7182042828">Call 718-204-2828</a>
+            </div>
+          </div>
+        </section>
+</div>
+<div class="x-page" data-page="team">
+<section class="x-sec" id="team" aria-labelledby="team-title">
+          <div class="x-wrap">
+            <div class="x-head x-rv">
+              <div>
+                <p class="x-eyebrow">04 — The family &amp; the team</p>
+                <h2 class="x-h2" id="team-title">Three generations, <em>one front door.</em></h2>
+              </div>
+            </div>
+            <div class="x-leads">
+              <article class="x-person x-rv">
+                <div class="x-mono" aria-hidden="true"><span>AH</span></div>
+                <h3>Anita Halvatzis</h3>
+                <p class="x-role">Owner since 1978</p>
+              </article>
+              <article class="x-person x-rv d1">
+                <div class="x-mono" aria-hidden="true"><span>PH</span></div>
+                <h3>Paul Halvatzis</h3>
+                <p class="x-role">Licensed Real Estate Broker</p>
+                <ul>
+                  <li>Best Real Estate Broker 2024–2026</li>
+                  <li><a class="x-link x-link--rest" href="tel:9173743203">917-374-3203</a></li>
+                  <li><a class="x-link x-link--rest" href="mailto:phalvatzis@amorellirealty.com">phalvatzis@amorellirealty.com</a></li>
+                </ul>
+              </article>
+              <article class="x-person x-rv d2">
+                <div class="x-mono" aria-hidden="true"><span>JH</span></div>
+                <h3>Jim Halvatzis</h3>
+                <p class="x-role">Co-Manager</p>
+              </article>
+              <article class="x-person x-rv d3">
+                <div class="x-mono" aria-hidden="true"><span>NH</span></div>
+                <h3>Nicholas Halvatzis</h3>
+                <p class="x-role">Third generation</p>
+                <ul>
+                  <li>Best Real Estate Agent 2024</li>
+                  <li>127 five-star Zillow reviews</li>
+                  <li><a class="x-link x-link--rest" href="mailto:nickhalvatzis@amorellirealty.com">nickhalvatzis@amorellirealty.com</a></li>
+                </ul>
+              </article>
+            </div>
+            <div class="x-agents-h x-rv">
+              <h3 class="x-h3">Our agents</h3>
+              <p class="x-small">Multilingual, and rooted in Queens.</p>
+            </div>
+            <ul class="x-agents x-rv">
+              <li><span class="x-ini" aria-hidden="true">JV</span><span><b>Joseph Vaccaro</b><small>Best Real Estate Agent 2020–2022</small></span></li>
+              <li><span class="x-ini" aria-hidden="true">CH</span><span><b>Christina Halvatzis</b></span></li>
+              <li><span class="x-ini" aria-hidden="true">GP</span><span><b>George Pardalis</b></span></li>
+              <li><span class="x-ini" aria-hidden="true">DD</span><span><b>Dillon DePinto</b></span></li>
+              <li><span class="x-ini" aria-hidden="true">YB</span><span><b>Yianni Bachas</b><small>Rentals &amp; Commercial</small></span></li>
+              <li><span class="x-ini" aria-hidden="true">EZ</span><span><b>Edmond Zhorda</b></span></li>
+              <li><span class="x-ini" aria-hidden="true">FG</span><span><b>Fotios Gerasopoulos</b></span></li>
+              <li><span class="x-ini" aria-hidden="true">JE</span><span><b>Jose Evertz</b></span></li>
+              <li><span class="x-ini" aria-hidden="true">KL</span><span><b>Kleomenis Lagos</b></span></li>
+              <li><span class="x-ini" aria-hidden="true">OS</span><span><b>Orly Sroka</b></span></li>
+            </ul>
+          </div>
+        </section>
+<section class="x-dark x-close-cta">
+          <div class="x-rv">
+            <p class="x-eyebrow">Amorelli Realty · Est. 1978</p>
+            <h2 class="x-h2">Let's talk about <em>your next move.</em></h2>
+            <div class="x-btns">
+              <a class="x-btn" href="#/valuation">Free valuation</a>
+              <a class="x-btn x-btn--line" href="tel:7182042828">Call 718-204-2828</a>
+            </div>
+          </div>
+        </section>
+</div>
+<div class="x-page" data-page="contact">
+<section class="x-sec x-sec--cream" id="contact" aria-labelledby="contact-title">
           <div class="x-wrap">
             <div class="x-head x-rv">
               <div>
@@ -853,34 +1043,34 @@
             </div>
           </div>
         </section>
-
-        <section class="x-dark x-close-cta" aria-labelledby="close-title">
+<section class="x-dark x-close-cta">
           <div class="x-rv">
             <p class="x-eyebrow">Amorelli Realty · Est. 1978</p>
-            <h2 class="x-h2" id="close-title">Let's talk about <em>your next move.</em></h2>
+            <h2 class="x-h2">Let's talk about <em>your next move.</em></h2>
             <div class="x-btns">
-              <a class="x-btn" href="#valuation">Free valuation</a>
+              <a class="x-btn" href="#/valuation">Free valuation</a>
               <a class="x-btn x-btn--line" href="tel:7182042828">Call 718-204-2828</a>
             </div>
           </div>
         </section>
-      </main>
+</div>
+</main>
       <footer class="x-foot">
         <div class="x-wrap">
           <div class="x-foot__grid">
             <div class="x-foot__about">
-              <a class="x-mark" href="#top" aria-label="Amorelli Realty, back to top"><b>AMORELLI</b><span>REALTY · EST. 1978</span></a>
+              <a class="x-mark" href="#/" aria-label="Amorelli Realty, back to top"><b>AMORELLI</b><span>REALTY · EST. 1978</span></a>
               <p>Astoria NY based, family owned real estate brokerage specializing in Queens residential, commercial &amp; rental properties since 1978.</p>
             </div>
             <nav aria-label="Explore">
               <h2>Explore</h2>
               <ul>
-                <li><a href="#listings">Listings</a></li>
-                <li><a href="#services">What we do</a></li>
-                <li><a href="#story">Our Story</a></li>
-                <li><a href="#team">Team</a></li>
-                <li><a href="#valuation">Free Valuation</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#/listings">Listings</a></li>
+                <li><a href="#/services">What we do</a></li>
+                <li><a href="#/story">Our Story</a></li>
+                <li><a href="#/team">Team</a></li>
+                <li><a href="#/valuation">Free Valuation</a></li>
+                <li><a href="#/contact">Contact</a></li>
               </ul>
             </nav>
             <div>
@@ -903,7 +1093,7 @@
           <div class="x-foot__base">
             <p>Equal Housing Opportunity</p>
             <p>© 2026 Amorelli Realty LLC</p>
-            <p>Design inspired by Meridia, template by html.design</p>
+            
           </div>
         </div>
       
@@ -925,14 +1115,8 @@
         window.addEventListener("scroll", onScroll, { passive: true });
         onScroll();
 
-        /* active nav link */
-        var navLinks = [].slice.call(d.querySelectorAll(".x-menu a"));
-        var spy = function () {
-          var line = window.innerHeight * 0.35, cur = null;
-          ["story", "team", "contact"].forEach(function (id) { var el = d.getElementById(id); if (el && el.getBoundingClientRect().top < line && el.getBoundingClientRect().bottom > line) cur = "#" + id; });
-          navLinks.forEach(function (a) { if (a.getAttribute("href") === cur) a.setAttribute("aria-current", "true"); else a.removeAttribute("aria-current"); });
-        };
-        window.addEventListener("scroll", spy, { passive: true });
+        /* active nav link: handled by the page router below */
+        
 
         /* mobile overlay */
         var burger = d.querySelector(".x-burger"), closeBtn = overlay.querySelector(".x-close");
@@ -1078,6 +1262,51 @@
           tabs[0].focus();
         });
       })();
+    </script>
+      <script>
+      (function () {
+        var d = document;
+        var PAGES = ['home', 'buy', 'sell', 'rent', 'commercial', 'story', 'team', 'contact'];
+        var TITLES = {
+          home: "Amorelli Realty \u00b7 Astoria's family brokerage since 1978",
+          buy: 'Buy a home in Queens \u00b7 Amorelli Realty',
+          sell: 'Sell your home \u00b7 Amorelli Realty',
+          rent: 'Rent in Queens \u00b7 Amorelli Realty',
+          commercial: 'Commercial real estate \u00b7 Amorelli Realty',
+          story: 'Our story since 1978 \u00b7 Amorelli Realty',
+          team: 'Meet the team \u00b7 Amorelli Realty',
+          contact: 'Contact \u00b7 Amorelli Realty'
+        };
+        var ANCHORS = { valuation: 'valuation', listings: 'listings', services: 'services' };
+        function route() {
+          var h = (location.hash || '').replace(/^#\/?/, '');
+          var page = 'home', anchor = null;
+          if (PAGES.indexOf(h) >= 0) { page = h; }
+          else if (h && ANCHORS[h]) { page = 'home'; anchor = ANCHORS[h]; }
+          var pages = d.querySelectorAll('.x-page[data-page]');
+          for (var i = 0; i < pages.length; i++) {
+            pages[i].classList.toggle('active', pages[i].getAttribute('data-page') === page);
+          }
+          var links = d.querySelectorAll('.x-menu a');
+          for (var j = 0; j < links.length; j++) {
+            var ah = (links[j].getAttribute('href') || '').replace(/^#\/?/, '');
+            if (ah === page) links[j].setAttribute('aria-current', 'page');
+            else links[j].removeAttribute('aria-current');
+          }
+          d.title = TITLES[page];
+          if (anchor) {
+            setTimeout(function () {
+              var el = d.getElementById(anchor);
+              if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }, 60);
+          } else {
+            window.scrollTo(0, 0);
+          }
+        }
+        window.addEventListener('hashchange', route);
+        route();
+      })();
+
     </script>
   </body>
 </html>
