@@ -1,0 +1,1083 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Amorelli Realty · Astoria's family brokerage since 1978</title>
+    <meta name="description" content="Independent, family-owned real estate brokerage in Astoria, Queens since 1978. Buy, sell, rent and commercial." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@400;500;600&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400&display=swap"
+    />
+    <link rel="stylesheet" href="hark.css" />
+    <link rel="stylesheet" href="hark-hero.css" />
+    <script>document.documentElement.classList.add("x-js");</script>
+    <style>
+      :root {
+        color-scheme: light;
+        --x-bg: #f5f3ee;
+        --x-navy: #1a2139;
+        --x-navy-2: #232b47;
+        --x-brass: #b59553;
+        --x-brass-ink: #86692f;
+        --x-cream: #fbf9f2;
+        --x-rule: rgba(26, 33, 57, 0.12);
+        --x-rule-on: rgba(251, 249, 242, 0.16);
+        --x-muted: #565b6b;
+        --x-muted-on: rgba(251, 249, 242, 0.72);
+        --x-serif: "Cormorant Garamond", "Times New Roman", serif;
+        --x-sans: "Inter", system-ui, -apple-system, sans-serif;
+        --x-max: 1280px;
+        --x-pad: clamp(20px, 4vw, 48px);
+        --x-sec: clamp(80px, 11vw, 144px);
+        --x-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+      }
+      html { scroll-padding-top: 88px; }
+      body { background: var(--x-bg); color: var(--x-navy); font: 400 16px/1.65 var(--x-sans); }
+      .x-page { overflow-x: clip; }
+      .x-wrap { max-width: var(--x-max); margin: 0 auto; padding-inline: var(--x-pad); }
+      .x-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+      .x-page :focus-visible { outline: 2px solid var(--x-brass); outline-offset: 3px; border-radius: 2px; }
+      .x-skip { position: absolute; left: 16px; top: -60px; z-index: 100; background: var(--x-navy); color: var(--x-cream); padding: 12px 16px; text-decoration: none; }
+      .x-skip:focus { top: 16px; }
+
+      /* type */
+      .x-eyebrow { font: 500 12px/1.4 var(--x-sans); letter-spacing: 0.18em; text-transform: uppercase; color: var(--x-brass-ink); margin: 0; display: flex; align-items: center; gap: 16px; }
+      .x-eyebrow::before { content: ""; width: 40px; height: 1px; background: var(--x-brass); flex: none; }
+      .x-dark .x-eyebrow, .x-on-dark .x-eyebrow { color: var(--x-brass); }
+      .x-h1, .x-h2, .x-h3 { font-family: var(--x-serif); font-weight: 300; letter-spacing: -0.02em; line-height: 1.02; margin: 0; }
+      .x-h1 { font-size: clamp(48px, 7.4vw, 104px); }
+      .x-h2 { font-size: clamp(40px, 5.2vw, 72px); }
+      .x-h3 { font-size: clamp(26px, 2.4vw, 32px); font-weight: 400; line-height: 1.15; }
+      .x-h2 em, .x-h1 em { font-style: italic; }
+      .x-lead { font-size: 18px; line-height: 1.7; color: var(--x-muted); max-width: 60ch; margin: 0; }
+      .x-small { font-size: 13px; color: var(--x-muted); margin: 0; }
+
+      /* buttons & links */
+      .x-btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 0 26px; border-radius: 2px; font: 500 12px/1 var(--x-sans); letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; border: 1px solid var(--x-navy); background: var(--x-navy); color: var(--x-cream); cursor: pointer; transition: background 0.35s var(--x-ease), color 0.35s var(--x-ease), border-color 0.35s var(--x-ease); }
+      .x-btn:hover { background: var(--x-brass); border-color: var(--x-brass); color: var(--x-navy); }
+      .x-btn--line { background: transparent; color: var(--x-navy); border-color: rgba(26, 33, 57, 0.35); }
+      .x-btn--line:hover { background: var(--x-navy); border-color: var(--x-navy); color: var(--x-cream); }
+      .x-on-dark .x-btn, .x-dark .x-btn { background: var(--x-cream); color: var(--x-navy); border-color: var(--x-cream); }
+      .x-on-dark .x-btn:hover, .x-dark .x-btn:hover { background: var(--x-brass); border-color: var(--x-brass); }
+      .x-on-dark .x-btn--line, .x-dark .x-btn--line { background: transparent; color: var(--x-cream); border-color: rgba(251, 249, 242, 0.45); }
+      .x-on-dark .x-btn--line:hover, .x-dark .x-btn--line:hover { background: var(--x-cream); color: var(--x-navy); border-color: var(--x-cream); }
+      .x-btns { display: flex; flex-wrap: wrap; gap: 12px; }
+      .x-link { color: inherit; text-decoration: none; background: linear-gradient(var(--x-brass), var(--x-brass)) 0 100% / 0 1px no-repeat; transition: background-size 0.45s var(--x-ease); padding-bottom: 2px; }
+      .x-link:hover, .x-link:focus-visible { background-size: 100% 1px; }
+      .x-link--rest { background-size: 100% 1px; background-image: linear-gradient(var(--x-rule), var(--x-rule)), linear-gradient(var(--x-brass), var(--x-brass)); background-size: 100% 1px, 0 1px; background-position: 0 100%, 0 100%; }
+      .x-link--rest:hover, .x-link--rest:focus-visible { background-size: 100% 1px, 100% 1px; }
+      @media (max-width: 1080px) {
+        .x-link--rest { display: inline-flex; align-items: center; min-height: 44px; padding-block: 0; background-position: 0 calc(50% + 0.75em), 0 calc(50% + 0.75em); }
+      }
+
+      /* header */
+      .x-header { position: fixed; inset: 0 0 auto 0; z-index: 50; color: var(--x-cream); transition: background 0.4s var(--x-ease), color 0.4s var(--x-ease), border-color 0.4s var(--x-ease); border-bottom: 1px solid transparent; }
+      .x-header.is-solid { background: rgba(245, 243, 238, 0.96); color: var(--x-navy); border-bottom-color: var(--x-rule); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+      .x-header__in { max-width: var(--x-max); margin: 0 auto; padding: 0 var(--x-pad); height: 84px; display: flex; align-items: center; gap: 32px; transition: height 0.4s var(--x-ease); }
+      .x-header.is-solid .x-header__in { height: 72px; }
+      .x-mark { text-decoration: none; color: inherit; display: inline-flex; flex-direction: column; line-height: 1; min-height: 44px; justify-content: center; }
+      .x-mark b { font: 400 26px/1 var(--x-serif); letter-spacing: 0.22em; }
+      .x-mark span { font: 500 12px/1 var(--x-sans); letter-spacing: 0.16em; margin-top: 6px; opacity: 0.85; white-space: nowrap; }
+      .x-overlay[hidden] { display: none; }
+      .x-menu { display: flex; gap: 28px; margin-left: auto; list-style: none; padding: 0; margin-block: 0; }
+      .x-menu a { font: 500 12px/1 var(--x-sans); letter-spacing: 0.14em; text-transform: uppercase; color: inherit; text-decoration: none; display: inline-flex; align-items: center; min-height: 44px; background: linear-gradient(var(--x-brass), var(--x-brass)) 0 calc(50% + 12px) / 0 1px no-repeat; transition: background-size 0.4s var(--x-ease); }
+      .x-menu a:hover, .x-menu a[aria-current] { background-size: 100% 1px; }
+      .x-header .x-btn { min-height: 44px; padding: 0 20px; background: transparent; color: inherit; border-color: currentColor; }
+      .x-header .x-btn:hover { background: var(--x-brass); border-color: var(--x-brass); color: var(--x-navy); }
+      .x-burger { display: none; margin-left: auto; width: 44px; height: 44px; border: 0; background: none; color: inherit; cursor: pointer; position: relative; }
+      .x-burger span { position: absolute; left: 10px; right: 10px; height: 1px; background: currentColor; transition: transform 0.4s var(--x-ease); }
+      .x-burger span:first-child { top: 17px; } .x-burger span:last-child { top: 26px; }
+      .x-overlay { position: fixed; inset: 0; z-index: 60; background: var(--x-navy); color: var(--x-cream); display: flex; flex-direction: column; padding: 24px var(--x-pad) 40px; opacity: 0; visibility: hidden; transition: opacity 0.45s var(--x-ease), visibility 0.45s; }
+      .x-overlay.is-open { opacity: 1; visibility: visible; }
+      .x-overlay__top { display: flex; align-items: center; justify-content: space-between; height: 48px; }
+      .x-close { width: 44px; height: 44px; border: 0; background: none; color: inherit; cursor: pointer; font: 300 36px/1 var(--x-serif); }
+      .x-overlay ol { list-style: none; padding: 0; margin: auto 0; counter-reset: m; }
+      .x-overlay li { counter-increment: m; border-bottom: 1px solid var(--x-rule-on); }
+      .x-overlay li a { display: flex; align-items: baseline; gap: 16px; padding: 12px 0; font: 300 clamp(32px, 9vw, 44px)/1.1 var(--x-serif); color: inherit; text-decoration: none; transform: translateY(12px); opacity: 0; transition: transform 0.6s var(--x-ease), opacity 0.6s var(--x-ease); }
+      .x-overlay li a::before { content: "0" counter(m); font: 500 12px/1 var(--x-sans); letter-spacing: 0.14em; color: var(--x-brass); }
+      .x-overlay.is-open li a { transform: none; opacity: 1; }
+      .x-overlay.is-open li:nth-child(2) a { transition-delay: 0.04s; } .x-overlay.is-open li:nth-child(3) a { transition-delay: 0.08s; } .x-overlay.is-open li:nth-child(4) a { transition-delay: 0.12s; } .x-overlay.is-open li:nth-child(5) a { transition-delay: 0.16s; } .x-overlay.is-open li:nth-child(6) a { transition-delay: 0.2s; } .x-overlay.is-open li:nth-child(7) a { transition-delay: 0.24s; }
+      .x-overlay__foot { display: grid; gap: 16px; }
+      .x-overlay__foot p { font-size: 14px; color: var(--x-muted-on); margin: 0; }
+      @media (max-width: 1080px) { .x-menu, .x-header .x-cta { display: none; } .x-burger { display: block; } }
+
+      /* hero */
+      .x-hero { position: relative; min-height: 100svh; color: var(--x-cream); display: flex; align-items: flex-end; overflow: hidden; background: var(--x-navy); }
+      .x-hero__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform-origin: 60% 40%; animation: x-kb 26s ease-out both; }
+      @keyframes x-kb { from { transform: scale(1.12); } to { transform: scale(1); } }
+      .x-hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top right, rgba(26, 33, 57, 0.94) 8%, rgba(26, 33, 57, 0.55) 45%, rgba(26, 33, 57, 0.15) 75%), linear-gradient(to bottom, rgba(26, 33, 57, 0.5), transparent 22%); }
+      .x-hero__in { position: relative; z-index: 1; width: 100%; max-width: var(--x-max); margin: 0 auto; padding: 160px var(--x-pad) clamp(48px, 7vw, 88px); display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 32px; align-items: end; }
+      .x-hero__copy { grid-column: 1 / span 8; display: grid; gap: 28px; }
+      .x-hero__sub { font-size: 18px; line-height: 1.65; color: rgba(251, 249, 242, 0.86); max-width: 56ch; margin: 0; }
+      .x-hero__call { font-size: 14px; color: var(--x-muted-on); margin: 0; }
+      .x-hero__call a { color: var(--x-cream); }
+      .x-hero__meta { grid-column: 10 / span 3; list-style: none; margin: 0; padding: 0; border-left: 1px solid var(--x-rule-on); }
+      .x-hero__meta li { padding: 18px 0 18px 24px; border-bottom: 1px solid var(--x-rule-on); }
+      .x-hero__meta li:last-child { border-bottom: 0; }
+      .x-hero__meta b { display: block; font: 300 40px/1 var(--x-serif); color: var(--x-brass); letter-spacing: -0.01em; }
+      .x-hero__meta span { font: 500 11px/1.4 var(--x-sans); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(251, 249, 242, 0.8); }
+      @media (max-width: 900px) {
+        .x-hero__copy, .x-hero__meta { grid-column: 1 / -1; }
+        .x-hero__meta { display: grid; grid-template-columns: repeat(3, 1fr); border-left: 0; border-top: 1px solid var(--x-rule-on); }
+        .x-hero__meta li { padding: 16px 12px 0 0; border-bottom: 0; }
+        .x-hero__meta b { font-size: 30px; }
+      }
+
+      /* trust bar */
+      .x-trust { border-bottom: 1px solid var(--x-rule); background: var(--x-bg); }
+      .x-trust ul { list-style: none; margin: 0 auto; max-width: var(--x-max); padding: 22px var(--x-pad); display: grid; grid-template-columns: repeat(4, auto); justify-content: space-between; gap: 16px 32px; }
+      .x-trust li { font-size: 13px; color: var(--x-muted); display: flex; align-items: center; gap: 12px; }
+      .x-trust li::before { content: ""; width: 6px; height: 6px; transform: rotate(45deg); background: var(--x-brass); flex: none; }
+      .x-trust strong { color: var(--x-navy); font-weight: 600; }
+      @media (max-width: 960px) { .x-trust ul { grid-template-columns: 1fr 1fr; } }
+      @media (max-width: 520px) { .x-trust ul { grid-template-columns: 1fr; } }
+
+      /* sections */
+      .x-sec { padding-block: var(--x-sec); }
+      .x-sec--cream { background: var(--x-cream); }
+      .x-dark { background: var(--x-navy); color: var(--x-cream); }
+      .x-head { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px 32px; align-items: end; margin-bottom: clamp(48px, 6vw, 80px); padding-top: 32px; border-top: 1px solid var(--x-rule); position: relative; }
+      .x-head::before { content: ""; position: absolute; top: -1px; left: 0; width: 96px; height: 1px; background: var(--x-brass); }
+      .x-dark .x-head { border-top-color: var(--x-rule-on); }
+      .x-head > div { grid-column: 1 / span 7; display: grid; gap: 24px; }
+      .x-head > p, .x-head > .x-aside { grid-column: 9 / span 4; }
+      @media (max-width: 860px) { .x-head > div, .x-head > p, .x-head > .x-aside { grid-column: 1 / -1; } }
+
+      /* filter + listings */
+      .x-filter { display: grid; grid-template-columns: minmax(220px, 280px) 1fr auto; gap: 24px 40px; align-items: end; padding: 24px 0; border-block: 1px solid var(--x-rule); margin-bottom: 48px; }
+      .x-field { display: grid; gap: 8px; }
+      .x-label { font: 500 12px/1.3 var(--x-sans); letter-spacing: 0.16em; text-transform: uppercase; color: var(--x-muted); }
+      .x-select, .x-input { appearance: none; -webkit-appearance: none; width: 100%; min-height: 48px; border: 0; border-bottom: 1px solid rgba(26, 33, 57, 0.3); background: transparent; font: 400 16px/1.4 var(--x-sans); color: var(--x-navy); padding: 10px 28px 10px 0; border-radius: 0; transition: border-color 0.3s; }
+      .x-select { background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%23B59553' stroke-width='1.2'%3E%3Cpath d='M1 1l5 5 5-5'/%3E%3C/svg%3E") right 4px center no-repeat; cursor: pointer; }
+      .x-input:focus, .x-select:focus { outline: none; border-bottom-color: var(--x-brass); box-shadow: 0 1px 0 var(--x-brass); }
+      textarea.x-input { min-height: 104px; resize: vertical; }
+      .x-types { display: flex; flex-wrap: wrap; gap: 8px; border: 0; padding: 0; margin: 0; }
+      .x-types legend { padding: 0; margin-bottom: 8px; }
+      .x-type { min-height: 44px; padding: 0 16px; border: 1px solid var(--x-rule); border-radius: 2px; background: transparent; font: 500 12px/1 var(--x-sans); letter-spacing: 0.08em; color: var(--x-navy); cursor: pointer; transition: border-color 0.3s, background 0.3s, color 0.3s; }
+      .x-type:hover { border-color: var(--x-navy); }
+      .x-type[aria-pressed="true"] { background: var(--x-navy); border-color: var(--x-navy); color: var(--x-cream); }
+      .x-count { font-size: 13px; color: var(--x-muted); margin: 0; white-space: nowrap; min-height: 44px; display: flex; align-items: center; }
+      @media (max-width: 960px) { .x-filter { grid-template-columns: 1fr; } }
+      .x-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+      .x-card { display: grid; gap: 20px; align-content: start; }
+      .x-card[hidden] { display: none; }
+      .x-card__media { position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: #e6e2d8; margin: 0; }
+      .x-card__media img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.1s var(--x-ease); }
+      .x-card:hover .x-card__media img { transform: scale(1.04); }
+      .x-badge { position: absolute; top: 16px; left: 16px; padding: 8px 12px; font: 600 12px/1 var(--x-sans); letter-spacing: 0.16em; text-transform: uppercase; background: var(--x-cream); color: var(--x-navy); border-radius: 2px; }
+      .x-badge--sale { background: var(--x-navy); color: var(--x-cream); }
+      .x-card__price { font: 300 40px/1 var(--x-serif); letter-spacing: -0.01em; margin: 0; }
+      .x-card__meta { display: flex; justify-content: space-between; gap: 16px; padding-top: 16px; border-top: 1px solid var(--x-rule); font-size: 14px; color: var(--x-muted); margin: 0; }
+      .x-card h3 { font: 500 16px/1.4 var(--x-sans); margin: 0; }
+      .x-empty { grid-column: 1 / -1; padding: 48px 0; border-block: 1px solid var(--x-rule); text-align: center; display: grid; gap: 16px; justify-items: center; }
+      .x-empty[hidden] { display: none; }
+      .x-listfoot { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px; margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--x-rule); font-size: 15px; }
+      @media (max-width: 900px) { .x-cards { grid-template-columns: 1fr 1fr; } }
+      @media (max-width: 600px) { .x-cards { grid-template-columns: 1fr; } .x-card__media { aspect-ratio: 4 / 3.6; } }
+
+      /* stats band */
+      .x-stats { list-style: none; margin: 0 auto; padding: clamp(56px, 7vw, 96px) var(--x-pad); max-width: var(--x-max); display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); }
+      .x-stats li { padding: 8px 24px; border-left: 1px solid var(--x-rule-on); display: grid; gap: 12px; }
+      .x-stats li:first-child { border-left: 0; padding-left: 0; }
+      .x-stats b { font: 300 clamp(44px, 4.6vw, 64px)/1 var(--x-serif); color: var(--x-brass); letter-spacing: -0.02em; }
+      .x-stats span { font: 500 12px/1.5 var(--x-sans); letter-spacing: 0.14em; text-transform: uppercase; color: var(--x-muted-on); }
+      @media (max-width: 900px) { .x-stats { grid-template-columns: repeat(2, 1fr); gap: 32px 0; } .x-stats li:nth-child(odd) { border-left: 0; padding-left: 0; } .x-stats li:last-child { grid-column: 1 / -1; border-left: 0; padding-left: 0; border-top: 1px solid var(--x-rule-on); padding-top: 32px; } }
+
+      /* story */
+      .x-story { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 48px 32px; align-items: center; }
+      .x-story__img { grid-column: 1 / span 6; margin: 0; position: relative; isolation: isolate; }
+      .x-story__img::after { content: ""; position: absolute; inset: 24px -24px -24px 24px; border: 1px solid var(--x-brass); z-index: -1; }
+      .x-story__img img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+      .x-story__img figcaption { font-size: 13px; color: var(--x-muted); margin-top: 40px; }
+      .x-story__copy { grid-column: 8 / span 5; display: grid; gap: 28px; }
+      .x-story__copy p { font-size: 17px; line-height: 1.75; color: var(--x-muted); margin: 0; }
+      .x-story__copy p:first-of-type::first-letter { font: 400 68px/0.8 var(--x-serif); float: left; padding: 8px 10px 0 0; color: var(--x-brass-ink); }
+      @media (max-width: 860px) { .x-story__img, .x-story__copy { grid-column: 1 / -1; } .x-story__img::after { inset: 16px -12px -16px 16px; } }
+      .x-tl { list-style: none; margin: clamp(72px, 9vw, 120px) 0 0; padding: 0; display: grid; grid-auto-flow: column; grid-auto-columns: minmax(152px, 1fr); gap: 0; overflow-x: auto; scroll-snap-type: x mandatory; position: relative; scrollbar-width: thin; }
+      .x-tl li { scroll-snap-align: start; padding: 40px 24px 16px 0; position: relative; border-top: 1px solid var(--x-rule); display: grid; gap: 10px; align-content: start; }
+      .x-tl li::before { content: ""; position: absolute; top: -5px; left: 0; width: 9px; height: 9px; border-radius: 50%; background: var(--x-bg); border: 1px solid var(--x-brass); }
+      .x-tl li:last-child::before { background: var(--x-brass); }
+      .x-tl b { font: 300 40px/1 var(--x-serif); color: var(--x-brass-ink); }
+      .x-tl span { font-size: 14px; line-height: 1.55; color: var(--x-navy); }
+      .x-tl i { color: var(--x-muted); }
+
+      /* services */
+      .x-svc { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); border-top: 1px solid var(--x-rule); border-left: 1px solid var(--x-rule); }
+      .x-svc article { padding: 40px 28px 44px; border-right: 1px solid var(--x-rule); border-bottom: 1px solid var(--x-rule); display: grid; gap: 20px; align-content: start; position: relative; transition: background 0.5s var(--x-ease); scroll-margin-top: 100px; }
+      .x-svc article::after { content: ""; position: absolute; left: 0; top: -1px; height: 1px; width: 0; background: var(--x-brass); transition: width 0.6s var(--x-ease); }
+      .x-svc article:hover, .x-svc article:target { background: var(--x-cream); }
+      .x-svc article:hover::after, .x-svc article:target::after { width: 100%; }
+      .x-svc svg { width: 40px; height: 40px; stroke: var(--x-brass-ink); fill: none; stroke-width: 1; }
+      .x-svc small { font: 500 12px/1 var(--x-sans); letter-spacing: 0.14em; color: var(--x-brass-ink); }
+      .x-svc p { font-size: 15px; color: var(--x-muted); margin: 0; }
+      .x-svc .x-h3 { font-size: 28px; }
+      @media (max-width: 1100px) { .x-svc { grid-template-columns: repeat(3, 1fr); } }
+      @media (max-width: 720px) { .x-svc { grid-template-columns: 1fr 1fr; } }
+      @media (max-width: 480px) { .x-svc { grid-template-columns: 1fr; } }
+
+      /* quote band */
+      .x-quote { position: relative; overflow: hidden; background: var(--x-navy); color: var(--x-cream); text-align: center; padding: clamp(120px, 16vw, 200px) var(--x-pad); }
+      .x-quote > img { position: absolute; inset: 0; width: 100%; height: 115%; object-fit: cover; top: -7.5%; will-change: transform; }
+      .x-quote::before { content: ""; position: absolute; inset: 0; background: rgba(20, 25, 44, 0.72); z-index: 1; }
+      .x-quote__in { position: relative; z-index: 2; max-width: 980px; margin: 0 auto; display: grid; gap: 32px; justify-items: center; }
+      .x-quote blockquote { margin: 0; font: italic 300 clamp(38px, 5.6vw, 76px)/1.1 var(--x-serif); letter-spacing: -0.015em; }
+      .x-quote blockquote::before { content: "\201C"; display: block; font: 400 96px/0.6 var(--x-serif); color: var(--x-brass); margin-bottom: 16px; font-style: normal; }
+      .x-quote cite { font: 500 12px/1.4 var(--x-sans); letter-spacing: 0.18em; text-transform: uppercase; font-style: normal; color: var(--x-brass); }
+      .x-quote p { max-width: 52ch; color: rgba(251, 249, 242, 0.84); font-size: 16px; margin: 0; padding-top: 24px; border-top: 1px solid var(--x-rule-on); }
+
+      /* testimonials */
+      .x-slider { position: relative; }
+      .x-slides { display: grid; }
+      .x-slide { grid-area: 1 / 1; opacity: 0; visibility: hidden; transition: opacity 0.8s var(--x-ease), visibility 0.8s; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 32px; }
+      .x-slide.is-on { opacity: 1; visibility: visible; }
+      .x-slide blockquote { grid-column: 1 / span 10; margin: 0; font: 300 clamp(28px, 3.4vw, 46px)/1.25 var(--x-serif); letter-spacing: -0.01em; }
+      .x-slide footer { grid-column: 1 / span 10; font: 500 12px/1.4 var(--x-sans); letter-spacing: 0.16em; text-transform: uppercase; color: var(--x-brass-ink); display: flex; align-items: center; gap: 16px; }
+      .x-slide footer::before { content: ""; width: 40px; height: 1px; background: var(--x-brass); }
+      .x-slide .x-stars { color: var(--x-brass-ink); letter-spacing: 0.2em; }
+      .x-ctrl { display: flex; align-items: center; gap: 24px; margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--x-rule); }
+      .x-arrow { flex: none; width: 48px; height: 48px; border: 1px solid rgba(26, 33, 57, 0.3); border-radius: 50%; background: transparent; color: var(--x-navy); cursor: pointer; display: grid; place-items: center; transition: background 0.3s, color 0.3s, border-color 0.3s; }
+      .x-arrow:hover { background: var(--x-navy); color: var(--x-cream); border-color: var(--x-navy); }
+      .x-arrow svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.3; }
+      .x-dots { display: flex; gap: 0; margin-left: auto; }
+      .x-dots button { width: 44px; height: 44px; border: 0; background: none; cursor: pointer; display: grid; place-items: center; padding: 0; }
+      .x-dots button::before { content: ""; width: 24px; height: 2px; background: var(--x-rule); transition: background 0.4s, width 0.4s; }
+      .x-dots button[aria-current="true"]::before { background: var(--x-brass); width: 36px; }
+      .x-counter { font: 300 22px/1 var(--x-serif); color: var(--x-muted); }
+      @media (max-width: 720px) { .x-slide blockquote, .x-slide footer { grid-column: 1 / -1; } }
+
+      /* team */
+      .x-leads { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }
+      .x-person { display: grid; gap: 16px; align-content: start; }
+      .x-mono { aspect-ratio: 4 / 5; background: var(--x-navy); display: grid; place-items: center; position: relative; overflow: hidden; }
+      .x-mono::before { content: ""; position: absolute; inset: 14px; border: 1px solid rgba(181, 149, 83, 0.45); transition: inset 0.6s var(--x-ease); }
+      .x-person:hover .x-mono::before { inset: 20px; }
+      .x-mono span { font: 300 clamp(56px, 6vw, 84px)/1 var(--x-serif); color: var(--x-brass); letter-spacing: 0.04em; transition: transform 1s var(--x-ease); }
+      .x-person:hover .x-mono span { transform: scale(1.04); }
+      .x-person h3 { font: 400 28px/1.1 var(--x-serif); margin: 8px 0 0; letter-spacing: -0.01em; }
+      .x-role { font: 500 12px/1.5 var(--x-sans); letter-spacing: 0.14em; text-transform: uppercase; color: var(--x-brass-ink); margin: 0; }
+      .x-person ul { list-style: none; padding: 12px 0 0; margin: 0; border-top: 1px solid var(--x-rule); display: grid; gap: 6px; font-size: 14px; color: var(--x-muted); }
+      .x-person ul a { color: var(--x-navy); overflow-wrap: anywhere; }
+      @media (max-width: 1000px) { .x-leads { grid-template-columns: 1fr 1fr; } }
+      @media (max-width: 480px) { .x-leads { grid-template-columns: 1fr; } .x-mono { aspect-ratio: 16 / 11; } }
+      .x-agents-h { margin: clamp(64px, 8vw, 96px) 0 32px; display: flex; justify-content: space-between; gap: 16px; align-items: baseline; flex-wrap: wrap; }
+      .x-agents { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); border-top: 1px solid var(--x-rule); }
+      .x-agents li { display: flex; align-items: center; gap: 16px; padding: 20px 16px 20px 0; border-bottom: 1px solid var(--x-rule); }
+      .x-agents .x-ini { width: 52px; height: 52px; flex: none; border-radius: 50%; background: var(--x-navy); color: var(--x-brass); display: grid; place-items: center; font: 400 20px/1 var(--x-serif); letter-spacing: 0.04em; }
+      .x-agents b { display: block; font-weight: 500; font-size: 15px; line-height: 1.3; }
+      .x-agents small { display: block; font-size: 12px; color: var(--x-muted); line-height: 1.4; margin-top: 2px; }
+      @media (max-width: 1100px) { .x-agents { grid-template-columns: repeat(3, 1fr); } }
+      @media (max-width: 720px) { .x-agents { grid-template-columns: 1fr 1fr; } }
+      @media (max-width: 440px) { .x-agents { grid-template-columns: 1fr; } }
+
+      /* awards */
+      .x-laurels { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 12px; }
+      .x-laurels li { display: grid; justify-items: center; text-align: center; gap: 4px; position: relative; }
+      .x-laurels svg { grid-area: 1 / 1; width: 100%; max-width: 104px; height: auto; color: var(--x-brass-ink); transition: transform 0.6s var(--x-ease); }
+      .x-laurels li:hover svg { transform: scale(1.04); }
+      .x-laurels b { grid-area: 1 / 1; align-self: center; margin-top: -8%; font: 400 clamp(17px, 1.8vw, 24px)/1 var(--x-serif); color: var(--x-navy); }
+      .x-laurels span { font: 500 12px/1.3 var(--x-sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--x-muted); }
+      @media (max-width: 900px) { .x-laurels { grid-template-columns: repeat(5, 1fr); row-gap: 24px; } }
+      @media (max-width: 420px) { .x-laurels { grid-template-columns: repeat(3, 1fr); } }
+      .x-press { list-style: none; padding: 32px 0; margin: clamp(64px, 8vw, 96px) 0 0; border-block: 1px solid var(--x-rule); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px 40px; }
+      .x-press li { font: 400 22px/1.2 var(--x-serif); font-variant: small-caps; letter-spacing: 0.04em; color: #6b6e78; }
+      .x-press li:nth-child(odd) { font-style: italic; font-variant: normal; }
+      .x-pull { margin: clamp(64px, 8vw, 96px) auto 0; max-width: 900px; text-align: center; display: grid; gap: 24px; }
+      .x-pull blockquote { margin: 0; font: italic 300 clamp(28px, 3.6vw, 44px)/1.25 var(--x-serif); }
+      .x-pull figcaption { font: 500 12px/1.4 var(--x-sans); letter-spacing: 0.18em; text-transform: uppercase; color: var(--x-brass-ink); }
+
+      /* valuation */
+      .x-val { display: grid; grid-template-columns: 5fr 7fr; background: var(--x-cream); border: 1px solid var(--x-rule); }
+      .x-val__panel { background: var(--x-navy); color: var(--x-cream); padding: clamp(40px, 5vw, 72px); display: grid; gap: 28px; align-content: space-between; position: relative; overflow: hidden; }
+      .x-val__panel::after { content: ""; position: absolute; width: 480px; height: 480px; right: -220px; bottom: -220px; border-radius: 50%; background: radial-gradient(circle, rgba(181, 149, 83, 0.28), transparent 65%); }
+      .x-val__panel p { color: rgba(251, 249, 242, 0.82); font-size: 17px; line-height: 1.7; margin: 0; position: relative; z-index: 1; }
+      .x-val__panel > * { position: relative; z-index: 1; }
+      .x-val__list { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; font-size: 14px; color: var(--x-muted-on); border-top: 1px solid var(--x-rule-on); padding-top: 24px; }
+      .x-val__list a { color: var(--x-cream); }
+      .x-val__form { padding: clamp(32px, 5vw, 64px); }
+      .x-tabs { display: flex; gap: 32px; border-bottom: 1px solid var(--x-rule); margin-bottom: 40px; }
+      .x-tab { min-height: 48px; border: 0; background: none; font: 500 12px/1 var(--x-sans); letter-spacing: 0.16em; text-transform: uppercase; color: var(--x-muted); cursor: pointer; padding: 0; position: relative; }
+      .x-tab::after { content: ""; position: absolute; left: 0; bottom: -1px; height: 2px; width: 0; background: var(--x-brass); transition: width 0.45s var(--x-ease); }
+      .x-tab[aria-selected="true"] { color: var(--x-navy); }
+      .x-tab[aria-selected="true"]::after { width: 100%; }
+      .x-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 32px; border: 0; padding: 0; margin: 0; min-width: 0; }
+      .x-grid[hidden] { display: none; }
+      .x-grid .x-full { grid-column: 1 / -1; }
+      .x-grid4 { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px 24px; }
+      @media (max-width: 600px) { .x-grid4 { grid-template-columns: 1fr 1fr; } }
+      .x-submit { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; margin-top: 40px; }
+      .x-thanks { display: grid; gap: 20px; justify-items: start; padding: 24px 0; }
+      .x-thanks[hidden] { display: none; }
+      .x-thanks svg { width: 56px; height: 56px; stroke: var(--x-brass-ink); fill: none; stroke-width: 1; }
+      .x-thanks svg circle { stroke-dasharray: 160; stroke-dashoffset: 160; animation: x-draw 1.2s var(--x-ease) forwards; }
+      .x-thanks svg path { stroke-dasharray: 40; stroke-dashoffset: 40; animation: x-draw 0.7s 0.7s var(--x-ease) forwards; }
+      @keyframes x-draw { to { stroke-dashoffset: 0; } }
+      @media (max-width: 900px) { .x-val { grid-template-columns: 1fr; } }
+      @media (max-width: 520px) { .x-grid { grid-template-columns: 1fr; } }
+
+      /* contact */
+      .x-contact { display: grid; grid-template-columns: 5fr 7fr; gap: 32px; align-items: stretch; }
+      .x-office { border: 1px solid var(--x-rule); background: var(--x-cream); padding: clamp(32px, 4vw, 56px); display: grid; gap: 32px; align-content: start; }
+      .x-office address { font: 300 clamp(28px, 2.8vw, 36px)/1.2 var(--x-serif); font-style: normal; }
+      .x-office address em { display: block; font-size: 0.62em; color: var(--x-brass-ink); margin-top: 12px; }
+      .x-dl { display: grid; grid-template-columns: auto 1fr; gap: 12px 24px; margin: 0; font-size: 15px; padding-top: 24px; border-top: 1px solid var(--x-rule); }
+      .x-dl dt { font: 500 12px/1.9 var(--x-sans); letter-spacing: 0.14em; text-transform: uppercase; color: var(--x-muted); }
+      .x-dl dd { margin: 0; }
+      .x-dl a { color: var(--x-navy); }
+      .x-map { position: relative; min-height: 440px; border: 1px solid var(--x-rule); overflow: hidden; background: #e6e2d8; }
+      .x-map iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; filter: grayscale(1) contrast(0.92) sepia(0.12); }
+      .x-map::after { content: ""; position: absolute; inset: 0; background: rgba(26, 33, 57, 0.06); pointer-events: none; mix-blend-mode: multiply; }
+      @media (max-width: 900px) { .x-contact { grid-template-columns: 1fr; } .x-map { min-height: 360px; } }
+
+      /* closing */
+      .x-close-cta { position: relative; overflow: hidden; text-align: center; padding: clamp(112px, 14vw, 176px) var(--x-pad); }
+      .x-close-cta::before { content: ""; position: absolute; left: 50%; top: 50%; width: min(1100px, 140vw); aspect-ratio: 1; transform: translate(-50%, -50%); background: radial-gradient(circle, rgba(181, 149, 83, 0.26), rgba(181, 149, 83, 0.06) 40%, transparent 65%); }
+      .x-close-cta > div { position: relative; display: grid; gap: 40px; justify-items: center; }
+      .x-close-cta .x-btns { justify-content: center; }
+
+      /* footer */
+      .x-foot { background: #141a2e; color: var(--x-muted-on); font-size: 14px; }
+      .x-foot__grid { display: grid; grid-template-columns: 5fr 2fr 3fr 2fr; gap: 48px 32px; padding-block: 88px 64px; }
+      .x-foot .x-mark { color: var(--x-cream); }
+      .x-foot__about { display: grid; gap: 24px; align-content: start; max-width: 40ch; }
+      .x-foot h2 { font: 500 12px/1 var(--x-sans); letter-spacing: 0.18em; text-transform: uppercase; color: var(--x-brass); margin: 0 0 20px; }
+      .x-foot ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 4px; }
+      .x-foot ul { gap: 0; }
+      .x-foot ul a { color: rgba(251, 249, 242, 0.86); text-decoration: none; display: inline-flex; min-height: 44px; min-width: 44px; align-items: center; }
+      .x-foot ul a:hover { color: var(--x-cream); }
+      .x-foot__base { border-top: 1px solid var(--x-rule-on); padding-block: 28px; display: flex; flex-wrap: wrap; gap: 12px 32px; justify-content: space-between; font-size: 12px; }
+      .x-foot__base p { margin: 0; }
+      .x-foot__base a { color: inherit; }
+      @media (max-width: 900px) { .x-foot__grid { grid-template-columns: 1fr 1fr; } .x-foot__about { grid-column: 1 / -1; } }
+
+      /* reveal */
+      .x-js .x-rv { opacity: 0; transform: translateY(24px); transition: opacity 0.9s var(--x-ease), transform 0.9s var(--x-ease); }
+      .x-js .x-rv.is-in { opacity: 1; transform: none; }
+      .x-rv.d1 { transition-delay: 0.08s; } .x-rv.d2 { transition-delay: 0.16s; } .x-rv.d3 { transition-delay: 0.24s; } .x-rv.d4 { transition-delay: 0.32s; }
+
+      @media (prefers-reduced-motion: reduce) {
+        .x-hero__img { animation: none; }
+        .x-js .x-rv { opacity: 1; transform: none; transition: none; }
+        .x-page *, .x-page *::before, .x-page *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="x-page" id="top">
+      <a class="x-skip" href="#main">Skip to content</a>
+      <header class="x-header" id="x-header">
+        <div class="x-header__in">
+          <a class="x-mark" href="#top" aria-label="Amorelli Realty, back to top"><b>AMORELLI</b><span>REALTY · EST. 1978</span></a>
+          <nav aria-label="Primary">
+            <ul class="x-menu">
+              <li><a href="#buy">Buy</a></li>
+              <li><a href="#sell">Sell</a></li>
+              <li><a href="#rent">Rent</a></li>
+              <li><a href="#commercial">Commercial</a></li>
+              <li><a href="#story">Our Story</a></li>
+              <li><a href="#team">Team</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+          <a class="x-btn x-cta" href="#valuation">Free Valuation</a>
+          <button class="x-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="x-overlay"><span></span><span></span></button>
+        </div>
+      </header>
+      <div class="x-overlay" id="x-overlay" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+        <div class="x-overlay__top">
+          <a class="x-mark" href="#top"><b>AMORELLI</b><span>REALTY · EST. 1978</span></a>
+          <button class="x-close" type="button" aria-label="Close menu">×</button>
+        </div>
+        <ol>
+          <li><a href="#buy">Buy</a></li>
+          <li><a href="#sell">Sell</a></li>
+          <li><a href="#rent">Rent</a></li>
+          <li><a href="#commercial">Commercial</a></li>
+          <li><a href="#story">Our Story</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ol>
+        <div class="x-overlay__foot x-on-dark">
+          <a class="x-btn" href="#valuation">Free Valuation</a>
+          <p>36-01 30th Avenue, Astoria · <a class="x-link x-link--rest" href="tel:7182042828">718-204-2828</a></p>
+        </div>
+      </div>
+
+      <main id="main">
+        <section class="x-hero" aria-labelledby="hero-title">
+          <img class="x-hero__img" src="hero.jpg" alt="Astoria row houses at golden hour" />
+          <div class="x-hero__in">
+            <div class="x-hero__copy x-on-dark">
+              <p class="x-eyebrow x-rv">Astoria, Queens · Since 1978</p>
+              <h1 class="x-h1 x-rv d1" id="hero-title">Astoria's family brokerage <em>since 1978.</em></h1>
+              <p class="x-hero__sub x-rv d2">Voted Queens' Best Real Estate Agency ten years running (2017–2026). Three generations of the Halvatzis family helping Queens buy, sell and rent.</p>
+              <div class="x-btns x-rv d3">
+                <a class="x-btn" href="#valuation">Get a free home valuation</a>
+                <a class="x-btn x-btn--line" href="#listings">Browse listings</a>
+              </div>
+              <p class="x-hero__call x-rv d4">Or call <a class="x-link x-link--rest" href="tel:7182042828">718-204-2828</a></p>
+            </div>
+            <ul class="x-hero__meta x-rv d3" aria-label="At a glance">
+              <li><b>48 years</b><span>in Queens</span></li>
+              <li><b>275+</b><span>sales</span></li>
+              <li><b>10×</b><span>Best of the Boro</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <div class="x-trust" role="region" aria-label="Recognition">
+          <ul>
+            <li><span><strong>10× Best of the Boro</strong>, Best Real Estate Agency 2017–2026</span></li>
+            <li><span><strong>5.0★ on Zillow</strong>, 299 team reviews</span></li>
+            <li><span><strong>275</strong> total sales</span></li>
+            <li><span>Featured in <strong>The Wall Street Journal</strong></span></li>
+          </ul>
+        </div>
+
+        <section class="x-sec" id="listings" aria-labelledby="listings-title">
+          <div class="x-wrap">
+            <div class="x-head x-rv">
+              <div>
+                <p class="x-eyebrow">Featured listings</p>
+                <h2 class="x-h2" id="listings-title">Homes we've <em>brought to market.</em></h2>
+              </div>
+              <p class="x-lead">From four-family investment buildings in Astoria to single-family homes in Whitestone.</p>
+            </div>
+
+            <form class="x-filter x-rv" id="x-filter" aria-label="Filter listings" onsubmit="return false">
+              <div class="x-field">
+                <label class="x-label" for="f-hood">Neighborhood</label>
+                <select class="x-select" id="f-hood">
+                  <option value="">All neighborhoods</option>
+                  <option value="astoria-lic">Astoria / LIC</option>
+                  <option value="bayside">Bayside</option>
+                  <option value="college-point">College Point</option>
+                  <option value="elmhurst">Elmhurst</option>
+                  <option value="flushing">Flushing</option>
+                  <option value="fresh-meadows">Fresh Meadows</option>
+                  <option value="jackson-heights">Jackson Heights</option>
+                  <option value="sunnyside">Sunnyside</option>
+                  <option value="woodside">Woodside</option>
+                </select>
+              </div>
+              <fieldset class="x-types">
+                <legend class="x-label">Type</legend>
+                <button class="x-type" type="button" data-type="" aria-pressed="true">All</button>
+                <button class="x-type" type="button" data-type="residential" aria-pressed="false">Residential</button>
+                <button class="x-type" type="button" data-type="multi" aria-pressed="false">Multi-Family</button>
+                <button class="x-type" type="button" data-type="commercial" aria-pressed="false">Commercial</button>
+                <button class="x-type" type="button" data-type="condo" aria-pressed="false">Condo/Co-op</button>
+                <button class="x-type" type="button" data-type="rentals" aria-pressed="false">Rentals</button>
+                <button class="x-type" type="button" data-type="land" aria-pressed="false">Lots/Land</button>
+              </fieldset>
+              <p class="x-count" id="x-count" aria-live="polite">3 of 3 shown</p>
+            </form>
+
+            <div class="x-cards">
+              <article class="x-card x-rv" data-hood="astoria-lic" data-types="residential multi">
+                <figure class="x-card__media">
+                  <img src="listing-astoria-4family.jpg" alt="Four-family residence at 23-50 31st Drive, Astoria" loading="lazy" />
+                  <span class="x-badge x-badge--sale">For Sale</span>
+                </figure>
+                <p class="x-card__price">$1,998,000</p>
+                <h3>23-50 31st Drive, Astoria</h3>
+                <p class="x-card__meta"><span>Four-family residence</span><span>Astoria</span></p>
+              </article>
+              <article class="x-card x-rv d1" data-hood="whitestone" data-types="residential">
+                <figure class="x-card__media">
+                  <img src="listing-whitestone.jpg" alt="Single-family home in Whitestone, Queens" loading="lazy" />
+                  <span class="x-badge">Sold</span>
+                </figure>
+                <p class="x-card__price">$2,800,000</p>
+                <h3>Whitestone, Queens</h3>
+                <p class="x-card__meta"><span>Single-family home</span><span>Whitestone</span></p>
+              </article>
+              <article class="x-card x-rv d2" data-hood="astoria-lic" data-types="residential">
+                <figure class="x-card__media">
+                  <img src="listing-lic.jpg" alt="Interior of a four-bedroom residence in Long Island City" loading="lazy" />
+                  <span class="x-badge">Sold</span>
+                </figure>
+                <p class="x-card__price">$1,150,000</p>
+                <h3>Long Island City</h3>
+                <p class="x-card__meta"><span>4-bedroom residence</span><span>LIC</span></p>
+              </article>
+              <div class="x-empty" id="x-empty" hidden>
+                <p class="x-h3">No featured listings match that search.</p>
+                <p class="x-small">Our agents know what's coming to market before it's listed.</p>
+                <a class="x-btn x-btn--line" href="#contact">Ask about current listings</a>
+              </div>
+            </div>
+
+            <div class="x-listfoot">
+              <p>Past closing: <a class="x-link x-link--rest" href="#contact">18-33 41st Street, Astoria — $2,650,000</a></p>
+              <a class="x-btn x-btn--line" href="#contact">Ask about current listings</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="x-dark" aria-label="By the numbers">
+          <ul class="x-stats">
+            <li class="x-rv"><b>1978</b><span>Founded</span></li>
+            <li class="x-rv d1"><b>275</b><span>Total sales</span></li>
+            <li class="x-rv d2"><b>$1.2M</b><span>Average sale</span></li>
+            <li class="x-rv d3"><b>34</b><span>Sales in the last 12 months</span></li>
+            <li class="x-rv d4"><b>10</b><span>Consecutive Best of the Boro wins</span></li>
+          </ul>
+        </section>
+        <section class="x-sec" id="story" aria-labelledby="story-title">
+          <div class="x-wrap">
+            <div class="x-story">
+              <figure class="x-story__img x-rv">
+                <img src="office.jpg" alt="Inside the Amorelli Realty office on 30th Avenue" loading="lazy" />
+                <figcaption>The office at 36-01 30th Avenue</figcaption>
+              </figure>
+              <div class="x-story__copy">
+                <p class="x-eyebrow x-rv">01 — Our Story</p>
+                <h2 class="x-h2 x-rv d1" id="story-title">Powerful &amp; proven <em>since 1978.</em></h2>
+                <p class="x-rv d2">Amorelli Realty has been a staple in Astoria, Queens for over 40 years. In 1978 Anita Halvatzis purchased the company and, with the help of her two sons Paul and Jim, grew it into one of the most successful offices in the borough.</p>
+                <p class="x-rv d3">In 1982 Anita had a vision that one day 30th Avenue would be the key central spot of Astoria. That vision has become a reality, with Astoria and LIC now a vibrant, welcoming hub for young professionals and families alike.</p>
+              </div>
+            </div>
+            <ol class="x-tl x-rv" aria-label="Milestones" tabindex="0">
+              <li><b>1978</b><span>Anita Halvatzis purchases Amorelli Realty</span></li>
+              <li><b>1982</b><span>A vision for 30th Avenue</span></li>
+              <li><b>2015</b><span>Featured in The Wall Street Journal: <i>“A Family-Owned Brokerage Holds Its Own”</i></span></li>
+              <li><b>2017</b><span>First Best of the Boro win</span></li>
+              <li><b>~2018</b><span>Nicholas Halvatzis joins, the third generation</span></li>
+              <li><b>2024</b><span>Paul named Best Real Estate Broker</span></li>
+              <li><b>2026</b><span>Tenth consecutive Best of the Boro win</span></li>
+            </ol>
+          </div>
+        </section>
+
+        <section class="x-sec x-sec--cream" id="services" aria-labelledby="services-title">
+          <div class="x-wrap">
+            <div class="x-head x-rv">
+              <div>
+                <p class="x-eyebrow">02 — What we do</p>
+                <h2 class="x-h2" id="services-title">Every kind of move, <em>one family office.</em></h2>
+              </div>
+            </div>
+            <div class="x-svc">
+              <article id="buy" class="x-rv">
+                <span id="sell" class="x-sr"></span>
+                <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M5 19 20 6l15 13"/><path d="M9 16v18h22V16"/><path d="M17 34v-9h6v9"/></svg>
+                <small>01</small>
+                <h3 class="x-h3">Residential</h3>
+                <p>Buying and selling homes across Queens, from first apartments to family houses.</p>
+              </article>
+              <article class="x-rv d1">
+                <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M4 34V14l8-6 8 6v20"/><path d="M20 34V10l8-5 8 5v24"/><path d="M2 34h36"/><path d="M9 19h6M9 25h6M25 15h6M25 21h6M25 27h6"/></svg>
+                <small>02</small>
+                <h3 class="x-h3">Multi-Family</h3>
+                <p>Owner-occupied one-to-three family homes and investment buildings.</p>
+              </article>
+              <article id="commercial" class="x-rv d2">
+                <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M6 15h28v19H6z"/><path d="M4 15l3-8h26l3 8"/><path d="M4 15c0 2 2 4 4 4s4-2 4-4c0 2 2 4 4 4s4-2 4-4c0 2 2 4 4 4s4-2 4-4c0 2 2 4 4 4s4-2 4-4"/><path d="M11 34v-9h7v9M23 24h7v5h-7z"/></svg>
+                <small>03</small>
+                <h3 class="x-h3">Commercial &amp; Mixed-Use</h3>
+                <p>Storefronts, mixed-use buildings and commercial leasing.</p>
+              </article>
+              <article id="rent" class="x-rv d3">
+                <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="13" cy="20" r="7"/><circle cx="13" cy="20" r="2"/><path d="M20 20h16M30 20v6M35 20v4"/></svg>
+                <small>04</small>
+                <h3 class="x-h3">Rentals &amp; Landlord Services</h3>
+                <p>We find qualified tenants and make renting feel personal, not corporate.</p>
+              </article>
+              <article class="x-rv d4">
+                <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M8 34V12h14v22"/><path d="M22 18h10v16"/><path d="M4 34h32"/><path d="M8 6h20M15 6v6M28 6v6"/><path d="M12 17h2M16 17h2M12 22h2M16 22h2M12 27h2M16 27h2M26 23h2M26 28h2"/></svg>
+                <small>05</small>
+                <h3 class="x-h3">New Development</h3>
+                <p>Marketing new construction with 3-D tours, virtual tours and digital campaigns.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="x-quote" aria-label="Our open-door policy">
+          <img src="thirtieth-avenue.jpg" alt="" id="x-parallax" loading="lazy" />
+          <figure class="x-quote__in">
+            <blockquote class="x-rv">We have an open-door policy. We're not secret agents.</blockquote>
+            <figcaption class="x-rv d1"><cite>Paul Halvatzis, Broker</cite></figcaption>
+            <p class="x-rv d2">Queens is one of the most diverse places in the world, and we take pride in our agents' multilingual ability.</p>
+          </figure>
+        </section>
+
+        <section class="x-sec x-sec--cream" id="reviews" aria-labelledby="reviews-title">
+          <div class="x-wrap">
+            <div class="x-head x-rv">
+              <div>
+                <p class="x-eyebrow">03 — Client words</p>
+                <h2 class="x-h2" id="reviews-title">In their <em>words.</em></h2>
+              </div>
+              <p class="x-lead">5.0★ on Zillow across 299 team reviews.</p>
+            </div>
+            <div class="x-slider x-rv" id="x-slider" role="region" aria-roledescription="carousel" aria-label="Client testimonials">
+              <div class="x-slides">
+                <figure class="x-slide is-on" role="group" aria-roledescription="slide" aria-label="1 of 4">
+                  <blockquote>“Nick helped us find our home, and we couldn't be happier! He was easy to work with, and personally vouched for us with the landlord. Amorelli Realty is a refreshing reminder that not all renting is dispassionate and corporate.”</blockquote>
+                  <footer>Google review</footer>
+                </figure>
+                <figure class="x-slide" role="group" aria-roledescription="slide" aria-label="2 of 4">
+                  <blockquote>“Working with Yianni was fantastic. Quick and easy process. He helped us rent our commercial space in less than 2 months.”</blockquote>
+                  <footer>Zillow, October 2026</footer>
+                </figure>
+                <figure class="x-slide" role="group" aria-roledescription="slide" aria-label="3 of 4">
+                  <blockquote>“Nick was simply the best! He was open and honest with communication, and was always quick to respond. He made the rental process seamless and stress-free!”</blockquote>
+                  <footer>Zillow, April 2025</footer>
+                </figure>
+                <figure class="x-slide" role="group" aria-roledescription="slide" aria-label="4 of 4">
+                  <blockquote>“There's no one-size-fits-all approach here. Paul and Jim Halvatzis, along with their staff, treat every client with respect and consideration.”</blockquote>
+                  <footer>Aplez</footer>
+                </figure>
+              </div>
+              <div class="x-ctrl">
+                <button class="x-arrow" type="button" data-dir="-1" aria-label="Previous testimonial"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg></button>
+                <button class="x-arrow" type="button" data-dir="1" aria-label="Next testimonial"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg></button>
+                <span class="x-counter" id="x-counter">01 / 04</span>
+                <div class="x-dots" id="x-dots"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="x-sec" id="team" aria-labelledby="team-title">
+          <div class="x-wrap">
+            <div class="x-head x-rv">
+              <div>
+                <p class="x-eyebrow">04 — The family &amp; the team</p>
+                <h2 class="x-h2" id="team-title">Three generations, <em>one front door.</em></h2>
+              </div>
+            </div>
+            <div class="x-leads">
+              <article class="x-person x-rv">
+                <div class="x-mono" aria-hidden="true"><span>AH</span></div>
+                <h3>Anita Halvatzis</h3>
+                <p class="x-role">Owner since 1978</p>
+              </article>
+              <article class="x-person x-rv d1">
+                <div class="x-mono" aria-hidden="true"><span>PH</span></div>
+                <h3>Paul Halvatzis</h3>
+                <p class="x-role">Licensed Real Estate Broker</p>
+                <ul>
+                  <li>Best Real Estate Broker 2024–2026</li>
+                  <li><a class="x-link x-link--rest" href="tel:9173743203">917-374-3203</a></li>
+                  <li><a class="x-link x-link--rest" href="mailto:phalvatzis@amorellirealty.com">phalvatzis@amorellirealty.com</a></li>
+                </ul>
+              </article>
+              <article class="x-person x-rv d2">
+                <div class="x-mono" aria-hidden="true"><span>JH</span></div>
+                <h3>Jim Halvatzis</h3>
+                <p class="x-role">Co-Manager</p>
+              </article>
+              <article class="x-person x-rv d3">
+                <div class="x-mono" aria-hidden="true"><span>NH</span></div>
+                <h3>Nicholas Halvatzis</h3>
+                <p class="x-role">Third generation</p>
+                <ul>
+                  <li>Best Real Estate Agent 2024</li>
+                  <li>127 five-star Zillow reviews</li>
+                  <li><a class="x-link x-link--rest" href="mailto:nickhalvatzis@amorellirealty.com">nickhalvatzis@amorellirealty.com</a></li>
+                </ul>
+              </article>
+            </div>
+            <div class="x-agents-h x-rv">
+              <h3 class="x-h3">Our agents</h3>
+              <p class="x-small">Multilingual, and rooted in Queens.</p>
+            </div>
+            <ul class="x-agents x-rv">
+              <li><span class="x-ini" aria-hidden="true">JV</span><span><b>Joseph Vaccaro</b><small>Best Real Estate Agent 2020–2022</small></span></li>
+              <li><span class="x-ini" aria-hidden="true">CH</span><span><b>Christina Halvatzis</b></span></li>
+              <li><span class="x-ini" aria-hidden="true">GP</span><span><b>George Pardalis</b></span></li>
+              <li><span class="x-ini" aria-hidden="true">DD</span><span><b>Dillon DePinto</b></span></li>
+              <li><span class="x-ini" aria-hidden="true">YB</span><span><b>Yianni Bachas</b><small>Rentals &amp; Commercial</small></span></li>
+              <li><span class="x-ini" aria-hidden="true">EZ</span><span><b>Edmond Zhorda</b></span></li>
+              <li><span class="x-ini" aria-hidden="true">FG</span><span><b>Fotios Gerasopoulos</b></span></li>
+              <li><span class="x-ini" aria-hidden="true">JE</span><span><b>Jose Evertz</b></span></li>
+              <li><span class="x-ini" aria-hidden="true">KL</span><span><b>Kleomenis Lagos</b></span></li>
+              <li><span class="x-ini" aria-hidden="true">OS</span><span><b>Orly Sroka</b></span></li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="x-sec x-sec--cream" id="recognition" aria-labelledby="rec-title">
+          <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+            <symbol id="x-laurel" viewBox="0 0 120 120">
+              <g fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round">
+                <path d="M46 104C24 96 12 76 14 50 15 38 20 26 28 18" />
+                <path d="M74 104c22-8 34-28 32-54-1-12-6-24-14-32" />
+                <path d="M46 104c6 2 22 2 28 0" />
+              </g>
+              <g fill="currentColor" opacity=".85">
+                <ellipse cx="22" cy="86" rx="3" ry="8" transform="rotate(-50 22 86)" />
+                <ellipse cx="15" cy="70" rx="3" ry="8" transform="rotate(-25 15 70)" />
+                <ellipse cx="13" cy="54" rx="3" ry="8" transform="rotate(-5 13 54)" />
+                <ellipse cx="16" cy="38" rx="3" ry="7.5" transform="rotate(15 16 38)" />
+                <ellipse cx="23" cy="25" rx="2.8" ry="7" transform="rotate(35 23 25)" />
+                <ellipse cx="98" cy="86" rx="3" ry="8" transform="rotate(50 98 86)" />
+                <ellipse cx="105" cy="70" rx="3" ry="8" transform="rotate(25 105 70)" />
+                <ellipse cx="107" cy="54" rx="3" ry="8" transform="rotate(5 107 54)" />
+                <ellipse cx="104" cy="38" rx="3" ry="7.5" transform="rotate(-15 104 38)" />
+                <ellipse cx="97" cy="25" rx="2.8" ry="7" transform="rotate(-35 97 25)" />
+              </g>
+              <path d="M60 70l2 4 4.5.6-3.3 3 .8 4.4L60 80l-4 2 .8-4.4-3.3-3 4.5-.6z" fill="currentColor" />
+            </symbol>
+          </svg>
+          <div class="x-wrap">
+            <div class="x-head x-rv">
+              <div>
+                <p class="x-eyebrow">05 — Recognition</p>
+                <h2 class="x-h2" id="rec-title">Ten years running, <em>Best of the Boro.</em></h2>
+              </div>
+              <p class="x-lead">Best Real Estate Agency in Queens, every year from 2017 to 2026.</p>
+            </div>
+            <ol class="x-laurels x-rv" aria-label="Best of the Boro wins">
+              <li><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#x-laurel" /></svg><b>2017</b><span>Best of the Boro</span></li>
+              <li><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#x-laurel" /></svg><b>2018</b><span>Best of the Boro</span></li>
+              <li><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#x-laurel" /></svg><b>2019</b><span>Best of the Boro</span></li>
+              <li><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#x-laurel" /></svg><b>2020</b><span>Best of the Boro</span></li>
+              <li><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#x-laurel" /></svg><b>2021</b><span>Best of the Boro</span></li>
+              <li><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#x-laurel" /></svg><b>2022</b><span>Best of the Boro</span></li>
+              <li><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#x-laurel" /></svg><b>2023</b><span>Best of the Boro</span></li>
+              <li><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#x-laurel" /></svg><b>2024</b><span>Best of the Boro</span></li>
+              <li><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#x-laurel" /></svg><b>2025</b><span>Best of the Boro</span></li>
+              <li><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#x-laurel" /></svg><b>2026</b><span>Best of the Boro</span></li>
+            </ol>
+            <ul class="x-press x-rv" aria-label="In the press">
+              <li>The Wall Street Journal</li>
+              <li>The New York Times</li>
+              <li>The Real Deal</li>
+              <li>Curbed NY</li>
+              <li>NY Daily News</li>
+              <li>Queens Gazette</li>
+              <li>QNS</li>
+            </ul>
+            <figure class="x-pull x-rv">
+              <blockquote>“In Astoria, Queens, the Halvatzis family's Amorelli Realty uses its strong community ties to compete against bigger incoming firms.”</blockquote>
+              <figcaption>The Wall Street Journal</figcaption>
+            </figure>
+          </div>
+        </section>
+        <section class="x-sec" id="valuation" aria-labelledby="val-title">
+          <div class="x-wrap">
+            <div class="x-val x-rv">
+              <div class="x-val__panel x-on-dark">
+                <div style="display:grid;gap:28px">
+                  <p class="x-eyebrow">06 — Free valuation</p>
+                  <h2 class="x-h2" id="val-title">What is your home <em>worth?</em></h2>
+                  <p>From first contact to the closing date and beyond, the Amorelli team will relentlessly pursue the right solution for your unique goals.</p>
+                </div>
+                <ul class="x-val__list">
+                  <li>Prefer to talk? <a class="x-link x-link--rest" href="tel:7182042828">718-204-2828</a></li>
+                  <li><a class="x-link x-link--rest" href="mailto:info@amorellirealty.com">info@amorellirealty.com</a></li>
+                </ul>
+              </div>
+              <div class="x-val__form">
+                <form id="x-form" novalidate>
+                  <div class="x-tabs" role="tablist" aria-label="I am">
+                    <button class="x-tab" type="button" role="tab" id="tab-sell" aria-controls="panel-sell" aria-selected="true">Selling</button>
+                    <button class="x-tab" type="button" role="tab" id="tab-buy" aria-controls="panel-buy" aria-selected="false" tabindex="-1">Buying</button>
+                  </div>
+                  <fieldset class="x-grid" id="panel-sell" role="tabpanel" aria-labelledby="tab-sell">
+                    <div class="x-field"><label class="x-label" for="s-name">Name</label><input class="x-input" id="s-name" name="name" autocomplete="name" required /></div>
+                    <div class="x-field"><label class="x-label" for="s-phone">Phone</label><input class="x-input" id="s-phone" name="phone" type="tel" autocomplete="tel" /></div>
+                    <div class="x-field x-full"><label class="x-label" for="s-email">Email</label><input class="x-input" id="s-email" name="email" type="email" autocomplete="email" required /></div>
+                    <div class="x-field"><label class="x-label" for="s-addr">Property address</label><input class="x-input" id="s-addr" name="address" autocomplete="street-address" /></div>
+                    <div class="x-field">
+                      <label class="x-label" for="s-type">Property type</label>
+                      <select class="x-select" id="s-type" name="type">
+                        <option>Single-family</option><option>Multi-family</option><option>Condo/Co-op</option><option>Commercial</option><option>Land</option>
+                      </select>
+                    </div>
+                    <div class="x-grid4">
+                      <div class="x-field"><label class="x-label" for="s-bed">Bedrooms</label><input class="x-input" id="s-bed" name="bedrooms" inputmode="numeric" /></div>
+                      <div class="x-field"><label class="x-label" for="s-bath">Bathrooms</label><input class="x-input" id="s-bath" name="bathrooms" inputmode="decimal" /></div>
+                      <div class="x-field"><label class="x-label" for="s-lot">Lot size</label><input class="x-input" id="s-lot" name="lot" /></div>
+                      <div class="x-field"><label class="x-label" for="s-year">Year built</label><input class="x-input" id="s-year" name="year" inputmode="numeric" /></div>
+                    </div>
+                    <div class="x-field x-full"><label class="x-label" for="s-msg">Message</label><textarea class="x-input" id="s-msg" name="message"></textarea></div>
+                  </fieldset>
+                  <fieldset class="x-grid" id="panel-buy" role="tabpanel" aria-labelledby="tab-buy" hidden disabled>
+                    <div class="x-field"><label class="x-label" for="b-name">Name</label><input class="x-input" id="b-name" name="name" autocomplete="name" required /></div>
+                    <div class="x-field"><label class="x-label" for="b-phone">Phone</label><input class="x-input" id="b-phone" name="phone" type="tel" autocomplete="tel" /></div>
+                    <div class="x-field x-full"><label class="x-label" for="b-email">Email</label><input class="x-input" id="b-email" name="email" type="email" autocomplete="email" required /></div>
+                    <div class="x-field"><label class="x-label" for="b-areas">Preferred areas</label><input class="x-input" id="b-areas" name="areas" /></div>
+                    <div class="x-field"><label class="x-label" for="b-price">Price range</label><input class="x-input" id="b-price" name="price" /></div>
+                    <div class="x-field x-full"><label class="x-label" for="b-msg">Message</label><textarea class="x-input" id="b-msg" name="message"></textarea></div>
+                  </fieldset>
+                  <div class="x-submit">
+                    <p class="x-small" id="x-form-note">We reply within one business day.</p>
+                    <button class="x-btn" type="submit" id="x-submit">Request my valuation</button>
+                  </div>
+                </form>
+                <div class="x-thanks" id="x-thanks" hidden tabindex="-1">
+                  <svg viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="25" /><path d="m18 29 7 7 13-15" /></svg>
+                  <p class="x-eyebrow">Received</p>
+                  <h3 class="x-h3" id="x-thanks-title">Thank you. We'll be in touch shortly.</h3>
+                  <p class="x-small">A member of the Halvatzis team will follow up personally. For anything urgent, call <a class="x-link x-link--rest" href="tel:7182042828">718-204-2828</a>.</p>
+                  <button class="x-btn x-btn--line" type="button" id="x-again">Send another request</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="x-sec x-sec--cream" id="contact" aria-labelledby="contact-title">
+          <div class="x-wrap">
+            <div class="x-head x-rv">
+              <div>
+                <p class="x-eyebrow">07 — Visit us</p>
+                <h2 class="x-h2" id="contact-title">Come by <em>30th Avenue.</em></h2>
+              </div>
+            </div>
+            <div class="x-contact">
+              <div class="x-office x-rv">
+                <address>36-01 30th Avenue, Astoria, NY 11103<em>Look for the blue awning.</em></address>
+                <dl class="x-dl">
+                  <dt>Phone</dt><dd><a class="x-link x-link--rest" href="tel:7182042828">718-204-2828</a></dd>
+                  <dt>Fax</dt><dd>718-662-2345</dd>
+                  <dt>Email</dt><dd><a class="x-link x-link--rest" href="mailto:info@amorellirealty.com">info@amorellirealty.com</a></dd>
+                  <dt>Mon–Fri</dt><dd>9:00 AM–7:30 PM</dd>
+                  <dt>Sat–Sun</dt><dd>10:00 AM–6:00 PM</dd>
+                </dl>
+                <div class="x-btns">
+                  <a class="x-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=36-01%2030th%20Ave%2C%20Astoria%2C%20NY%2011103" target="_blank" rel="noopener">Get directions</a>
+                  <a class="x-btn x-btn--line" href="tel:7182042828">Call the office</a>
+                </div>
+              </div>
+              <div class="x-map x-rv d1">
+                <iframe title="Map of 36-01 30th Ave, Astoria, NY 11103" src="https://www.google.com/maps?q=36-01+30th+Ave,+Astoria,+NY+11103&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="x-dark x-close-cta" aria-labelledby="close-title">
+          <div class="x-rv">
+            <p class="x-eyebrow">Amorelli Realty · Est. 1978</p>
+            <h2 class="x-h2" id="close-title">Let's talk about <em>your next move.</em></h2>
+            <div class="x-btns">
+              <a class="x-btn" href="#valuation">Free valuation</a>
+              <a class="x-btn x-btn--line" href="tel:7182042828">Call 718-204-2828</a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="x-foot">
+        <div class="x-wrap">
+          <div class="x-foot__grid">
+            <div class="x-foot__about">
+              <a class="x-mark" href="#top" aria-label="Amorelli Realty, back to top"><b>AMORELLI</b><span>REALTY · EST. 1978</span></a>
+              <p>Astoria NY based, family owned real estate brokerage specializing in Queens residential, commercial &amp; rental properties since 1978.</p>
+            </div>
+            <nav aria-label="Explore">
+              <h2>Explore</h2>
+              <ul>
+                <li><a href="#listings">Listings</a></li>
+                <li><a href="#services">What we do</a></li>
+                <li><a href="#story">Our Story</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#valuation">Free Valuation</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </nav>
+            <div>
+              <h2>Contact</h2>
+              <ul>
+                <li><a href="https://www.google.com/maps/dir/?api=1&amp;destination=36-01%2030th%20Ave%2C%20Astoria%2C%20NY%2011103" target="_blank" rel="noopener">36-01 30th Avenue, Astoria, NY 11103</a></li>
+                <li><a href="tel:7182042828">718-204-2828</a></li>
+                <li><a href="mailto:info@amorellirealty.com">info@amorellirealty.com</a></li>
+                <li><span>Fax 718-662-2345</span></li>
+              </ul>
+            </div>
+            <div>
+              <h2>Social</h2>
+              <ul>
+                <li><a href="https://www.facebook.com/AmorelliRealty" target="_blank" rel="noopener">Facebook</a></li>
+                <li><a href="https://www.instagram.com/amorellirealty/" target="_blank" rel="noopener">Instagram</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="x-foot__base">
+            <p>Equal Housing Opportunity</p>
+            <p>© 2026 Amorelli Realty LLC</p>
+            <p>Design inspired by Meridia, template by html.design</p>
+          </div>
+        </div>
+      
+<div style="text-align:center;padding:12px 16px;font-size:12.5px;opacity:.7">Developed by <a href="https://teta.dpdns.org" target="_blank" rel="noopener" style="color:inherit">Teta Digitals</a></div>
+</footer>
+    </div>
+    <script src="hark.js"></script>
+    <script>
+      (function () {
+        var d = document, root = d.documentElement;
+        var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        root.classList.add("x-js");
+        root.removeAttribute("data-theme");
+
+        /* header */
+        var header = d.getElementById("x-header");
+        var onScroll = function () { header.classList.toggle("is-solid", window.scrollY > 40 || overlay.classList.contains("is-open")); };
+        var overlay = d.getElementById("x-overlay");
+        window.addEventListener("scroll", onScroll, { passive: true });
+        onScroll();
+
+        /* active nav link */
+        var navLinks = [].slice.call(d.querySelectorAll(".x-menu a"));
+        var spy = function () {
+          var line = window.innerHeight * 0.35, cur = null;
+          ["story", "team", "contact"].forEach(function (id) { var el = d.getElementById(id); if (el && el.getBoundingClientRect().top < line && el.getBoundingClientRect().bottom > line) cur = "#" + id; });
+          navLinks.forEach(function (a) { if (a.getAttribute("href") === cur) a.setAttribute("aria-current", "true"); else a.removeAttribute("aria-current"); });
+        };
+        window.addEventListener("scroll", spy, { passive: true });
+
+        /* mobile overlay */
+        var burger = d.querySelector(".x-burger"), closeBtn = overlay.querySelector(".x-close");
+        function openMenu() {
+          overlay.hidden = false;
+          requestAnimationFrame(function () { overlay.classList.add("is-open"); });
+          burger.setAttribute("aria-expanded", "true");
+          d.body.style.overflow = "hidden";
+          closeBtn.focus();
+        }
+        function closeMenu(noFocus) {
+          overlay.classList.remove("is-open");
+          burger.setAttribute("aria-expanded", "false");
+          d.body.style.overflow = "";
+          setTimeout(function () { overlay.hidden = true; }, reduce ? 0 : 450);
+          if (!noFocus) burger.focus();
+        }
+        burger.addEventListener("click", openMenu);
+        closeBtn.addEventListener("click", function () { closeMenu(); });
+        overlay.addEventListener("click", function (e) { if (e.target.closest("a")) closeMenu(true); });
+        d.addEventListener("keydown", function (e) {
+          if (!overlay.classList.contains("is-open")) return;
+          if (e.key === "Escape") closeMenu();
+          if (e.key === "Tab") {
+            var f = overlay.querySelectorAll("a, button"), first = f[0], last = f[f.length - 1];
+            if (e.shiftKey && d.activeElement === first) { e.preventDefault(); last.focus(); }
+            else if (!e.shiftKey && d.activeElement === last) { e.preventDefault(); first.focus(); }
+          }
+        });
+
+        /* reveals */
+        var rv = [].slice.call(d.querySelectorAll(".x-rv"));
+        if (reduce || !("IntersectionObserver" in window)) rv.forEach(function (el) { el.classList.add("is-in"); });
+        else {
+          var io = new IntersectionObserver(function (es) {
+            es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("is-in"); io.unobserve(e.target); } });
+          }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+          rv.forEach(function (el) { io.observe(el); });
+        }
+
+        /* parallax on quote band */
+        var px = d.getElementById("x-parallax");
+        if (px && !reduce) {
+          var band = px.parentNode, ticking = false;
+          var move = function () {
+            var r = band.getBoundingClientRect(), vh = window.innerHeight;
+            if (r.bottom > 0 && r.top < vh) { var p = (r.top + r.height / 2 - vh / 2) / vh; px.style.transform = "translateY(" + (p * -6).toFixed(2) + "%)"; }
+            ticking = false;
+          };
+          window.addEventListener("scroll", function () { if (!ticking) { ticking = true; requestAnimationFrame(move); } }, { passive: true });
+          move();
+        }
+
+        /* listing filter */
+        var hood = d.getElementById("f-hood"), typeBtns = [].slice.call(d.querySelectorAll(".x-type"));
+        var cards = [].slice.call(d.querySelectorAll(".x-card")), empty = d.getElementById("x-empty"), count = d.getElementById("x-count");
+        var type = "";
+        function filter() {
+          var h = hood.value, shown = 0;
+          cards.forEach(function (c) {
+            var ok = (!h || c.dataset.hood === h) && (!type || c.dataset.types.split(" ").indexOf(type) > -1);
+            c.hidden = !ok;
+            if (ok) { shown++; c.classList.add("is-in"); }
+          });
+          empty.hidden = shown > 0;
+          count.textContent = shown + " of " + cards.length + " shown";
+        }
+        hood.addEventListener("change", filter);
+        typeBtns.forEach(function (b) {
+          b.addEventListener("click", function () {
+            type = b.dataset.type;
+            typeBtns.forEach(function (o) { o.setAttribute("aria-pressed", o === b ? "true" : "false"); });
+            filter();
+          });
+        });
+
+        /* testimonials */
+        var slider = d.getElementById("x-slider"), slides = [].slice.call(slider.querySelectorAll(".x-slide"));
+        var dotsBox = d.getElementById("x-dots"), counter = d.getElementById("x-counter"), idx = 0, timer = null;
+        var dots = slides.map(function (s, i) {
+          var b = d.createElement("button");
+          b.type = "button";
+          b.setAttribute("aria-label", "Show testimonial " + (i + 1));
+          b.addEventListener("click", function () { go(i); restart(); });
+          dotsBox.appendChild(b);
+          return b;
+        });
+        function pad(n) { return (n < 10 ? "0" : "") + n; }
+        function go(i) {
+          idx = (i + slides.length) % slides.length;
+          slides.forEach(function (s, j) { s.classList.toggle("is-on", j === idx); s.setAttribute("aria-hidden", j === idx ? "false" : "true"); });
+          dots.forEach(function (b, j) { b.setAttribute("aria-current", j === idx ? "true" : "false"); });
+          counter.textContent = pad(idx + 1) + " / " + pad(slides.length);
+        }
+        function stop() { clearInterval(timer); timer = null; }
+        function restart() { stop(); if (!reduce) timer = setInterval(function () { go(idx + 1); }, 7000); }
+        [].slice.call(slider.querySelectorAll(".x-arrow")).forEach(function (b) {
+          b.addEventListener("click", function () { go(idx + Number(b.dataset.dir)); restart(); });
+        });
+        slider.addEventListener("mouseenter", stop);
+        slider.addEventListener("mouseleave", restart);
+        slider.addEventListener("focusin", stop);
+        slider.addEventListener("focusout", restart);
+        go(0);
+        restart();
+
+        /* valuation form */
+        var form = d.getElementById("x-form"), thanks = d.getElementById("x-thanks"), submit = d.getElementById("x-submit");
+        var tabs = [].slice.call(form.querySelectorAll(".x-tab"));
+        function selectTab(t) {
+          tabs.forEach(function (o) {
+            var on = o === t, panel = d.getElementById(o.getAttribute("aria-controls"));
+            o.setAttribute("aria-selected", on ? "true" : "false");
+            o.tabIndex = on ? 0 : -1;
+            panel.hidden = !on;
+            panel.disabled = !on;
+          });
+          submit.textContent = t.id === "tab-sell" ? "Request my valuation" : "Start my search";
+        }
+        tabs.forEach(function (t, i) {
+          t.addEventListener("click", function () { selectTab(t); });
+          t.addEventListener("keydown", function (e) {
+            if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+            var n = tabs[(i + (e.key === "ArrowRight" ? 1 : -1) + tabs.length) % tabs.length];
+            selectTab(n); n.focus();
+          });
+        });
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          var panel = form.querySelector(".x-grid:not([hidden])");
+          var bad = [].slice.call(panel.querySelectorAll("input[required]")).filter(function (i) { return !i.checkValidity(); });
+          if (bad.length) { bad[0].focus(); bad[0].reportValidity(); return; }
+          var buying = !d.getElementById("panel-buy").hidden;
+          d.getElementById("x-thanks-title").textContent = buying ? "Thank you. We'll start the search with you shortly." : "Thank you. Your valuation is on its way.";
+          form.hidden = true;
+          thanks.hidden = false;
+          thanks.focus();
+        });
+        d.getElementById("x-again").addEventListener("click", function () {
+          form.reset();
+          thanks.hidden = true;
+          form.hidden = false;
+          tabs[0].focus();
+        });
+      })();
+    </script>
+  </body>
+</html>
