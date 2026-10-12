@@ -375,6 +375,17 @@
     a.x-svc-link { color: inherit; text-decoration: none; display: block; }
     a.x-svc-link:hover h3 { text-decoration: underline; }
     .x-menu a[aria-current="page"] { text-decoration: underline; text-underline-offset: 6px; }
+  
+    .x-langwrap { display: inline-flex; align-items: center; }
+    .x-langsel { background: transparent; border: 1px solid currentColor; border-radius: 999px;
+      padding: 8px 12px; font: inherit; font-size: .8rem; color: inherit; cursor: pointer; opacity: .9; }
+    .x-langsel option { color: #111; }
+  
+    .x-est { border: 1px solid var(--x-rule); border-radius: 12px; padding: 28px; margin-bottom: 36px; display: grid; gap: 18px; }
+    .x-grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 18px; }
+    .x-est__out { display: grid; gap: 10px; padding-top: 8px; border-top: 1px solid var(--x-rule); }
+    .x-est__out[hidden] { display: none; }
+    .x-est__range { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 600; letter-spacing: -0.01em; }
   </style>
   </head>
   <body>
@@ -382,21 +393,22 @@
       <a class="x-skip" href="#main">Skip to content</a>
       
       <header class="x-header" id="x-header">
-      <div class="x-notice" role="note">Independent concept preview &middot; not an official or approved business website</div>
+      <div class="x-notice" role="note" data-i18n="banner">Independent concept preview &middot; not an official or approved business website</div>
         <div class="x-header__in">
           <a class="x-mark" href="#/" aria-label="Amorelli Realty, back to top"><b>AMORELLI</b><span>REALTY · EST. 1978</span></a>
           <nav aria-label="Primary">
             <ul class="x-menu">
-              <li><a href="#/buy">Buy</a></li>
-              <li><a href="#/sell">Sell</a></li>
-              <li><a href="#/rent">Rent</a></li>
-              <li><a href="#/commercial">Commercial</a></li>
-              <li><a href="#/story">Our Story</a></li>
-              <li><a href="#/team">Team</a></li>
-              <li><a href="#/contact">Contact</a></li>
+              <li><a href="#/buy" data-i18n="nav.buy">Buy</a></li>
+              <li><a href="#/sell" data-i18n="nav.sell">Sell</a></li>
+              <li><a href="#/rent" data-i18n="nav.rent">Rent</a></li>
+              <li><a href="#/commercial" data-i18n="nav.commercial">Commercial</a></li>
+              <li><a href="#/story" data-i18n="nav.story">Our Story</a></li>
+              <li><a href="#/team" data-i18n="nav.team">Team</a></li>
+              <li><a href="#/contact" data-i18n="nav.contact">Contact</a></li>
             </ul>
           </nav>
-          <a class="x-btn x-cta" href="#/valuation">Free Valuation</a>
+          <label class="x-langwrap"><span class="x-sr">Language</span><select class="x-langsel" aria-label="Language"></select></label>
+          <a class="x-btn x-cta" href="#/valuation" data-i18n="nav.cta">Free Valuation</a>
           <button class="x-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="x-overlay"><span></span><span></span></button>
         </div>
       </header>
@@ -406,15 +418,16 @@
           <button class="x-close" type="button" aria-label="Close menu">×</button>
         </div>
         <ol>
-          <li><a href="#/buy">Buy</a></li>
-          <li><a href="#/sell">Sell</a></li>
-          <li><a href="#/rent">Rent</a></li>
-          <li><a href="#/commercial">Commercial</a></li>
-          <li><a href="#/story">Our Story</a></li>
-          <li><a href="#/team">Team</a></li>
-          <li><a href="#/contact">Contact</a></li>
+          <li><a href="#/buy" data-i18n="nav.buy">Buy</a></li>
+          <li><a href="#/sell" data-i18n="nav.sell">Sell</a></li>
+          <li><a href="#/rent" data-i18n="nav.rent">Rent</a></li>
+          <li><a href="#/commercial" data-i18n="nav.commercial">Commercial</a></li>
+          <li><a href="#/story" data-i18n="nav.story">Our Story</a></li>
+          <li><a href="#/team" data-i18n="nav.team">Team</a></li>
+          <li><a href="#/contact" data-i18n="nav.contact">Contact</a></li>
         </ol>
         <div class="x-overlay__foot x-on-dark">
+          <label class="x-langwrap"><span class="x-sr">Language</span><select class="x-langsel" aria-label="Language"></select></label>
           <a class="x-btn" href="#/valuation">Free Valuation</a>
           <p>36-01 30th Avenue, Astoria · <a class="x-link x-link--rest" href="tel:7182042828">718-204-2828</a></p>
         </div>
@@ -426,66 +439,66 @@
           <img class="x-hero__img" src="hero.jpg" alt="Astoria row houses at golden hour" />
           <div class="x-hero__in">
             <div class="x-hero__copy x-on-dark">
-              <p class="x-eyebrow x-rv">Astoria, Queens · Since 1978</p>
-              <h1 class="x-h1 x-rv d1" id="hero-title">Astoria's family brokerage <em>since 1978.</em></h1>
-              <p class="x-hero__sub x-rv d2">Voted Queens' Best Real Estate Agency ten years running (2017–2026). Three generations of the Halvatzis family helping Queens buy, sell and rent.</p>
+              <p class="x-eyebrow x-rv" data-i18n="hero.kicker">Astoria, Queens · Since 1978</p>
+              <h1 class="x-h1 x-rv d1" id="hero-title" data-i18n="hero.title">Astoria's family brokerage <em>since 1978.</em></h1>
+              <p class="x-hero__sub x-rv d2" data-i18n="hero.sub">Voted Queens' Best Real Estate Agency ten years running (2017–2026). Three generations of the Halvatzis family helping Queens buy, sell and rent.</p>
               <div class="x-btns x-rv d3">
-                <a class="x-btn" href="#/valuation">Get a free home valuation</a>
-                <a class="x-btn x-btn--line" href="#/listings">Browse listings</a>
+                <a class="x-btn" href="#/valuation" data-i18n="hero.cta1">Get a free home valuation</a>
+                <a class="x-btn x-btn--line" href="#/listings" data-i18n="hero.cta2">Browse listings</a>
               </div>
-              <p class="x-hero__call x-rv d4">Or call <a class="x-link x-link--rest" href="tel:7182042828">718-204-2828</a></p>
+              <p class="x-hero__call x-rv d4">Or call < data-i18n="hero.orcall"> class="x-link x-link--rest" href="tel:7182042828">718-204-2828</a></p>
             </div>
             <ul class="x-hero__meta x-rv d3" aria-label="At a glance">
-              <li><b>48 years</b><span>in Queens</span></li>
-              <li><b>275+</b><span>sales</span></li>
-              <li><b>10×</b><span>Best of the Boro</span></li>
+              <li><b>48 years</b><span data-i18n="hero.s1l">in Queens</span></li>
+              <li><b>275+</b><span data-i18n="hero.s2l">sales</span></li>
+              <li><b>10×</b><span data-i18n="hero.s3l">Best of the Boro</span></li>
             </ul>
           </div>
         </section>
 <section class="x-dark" aria-label="By the numbers">
           <ul class="x-stats">
-            <li class="x-rv"><b>1978</b><span>Founded</span></li>
-            <li class="x-rv d1"><b>275</b><span>Total sales</span></li>
-            <li class="x-rv d2"><b>$1.2M</b><span>Average sale</span></li>
-            <li class="x-rv d3"><b>34</b><span>Sales in the last 12 months</span></li>
-            <li class="x-rv d4"><b>10</b><span>Consecutive Best of the Boro wins</span></li>
+            <li class="x-rv"><b>1978</b><span data-i18n="stats.founded">Founded</span></li>
+            <li class="x-rv d1"><b>275</b><span data-i18n="stats.totalsales">Total sales</span></li>
+            <li class="x-rv d2"><b>$1.2M</b><span data-i18n="stats.avgsale">Average sale</span></li>
+            <li class="x-rv d3"><b>34</b><span data-i18n="stats.sales12">Sales in the last 12 months</span></li>
+            <li class="x-rv d4"><b>10</b><span data-i18n="stats.wins">Consecutive Best of the Boro wins</span></li>
           </ul>
         </section>
 <section class="x-sec" id="listings" aria-labelledby="listings-title">
           <div class="x-wrap">
             <div class="x-head x-rv">
               <div>
-                <p class="x-eyebrow">Featured listings</p>
-                <h2 class="x-h2" id="listings-title">Homes we've <em>brought to market.</em></h2>
+                <p class="x-eyebrow" data-i18n="list.kicker">Featured listings</p>
+                <h2 class="x-h2" id="listings-title" data-i18n="list.title">Homes we've <em>brought to market.</em></h2>
               </div>
-              <p class="x-lead">From four-family investment buildings in Astoria to single-family homes in Whitestone.</p>
+              <p class="x-lead" data-i18n="list.lead">From four-family investment buildings in Astoria to single-family homes in Whitestone.</p>
             </div>
 
             <form class="x-filter x-rv" id="x-filter" aria-label="Filter listings" onsubmit="return false">
               <div class="x-field">
-                <label class="x-label" for="f-hood">Neighborhood</label>
+                <label class="x-label" for="f-hood" data-i18n="list.hood">Neighborhood</label>
                 <select class="x-select" id="f-hood">
-                  <option value="">All neighborhoods</option>
-                  <option value="astoria-lic">Astoria / LIC</option>
-                  <option value="bayside">Bayside</option>
-                  <option value="college-point">College Point</option>
-                  <option value="elmhurst">Elmhurst</option>
-                  <option value="flushing">Flushing</option>
-                  <option value="fresh-meadows">Fresh Meadows</option>
-                  <option value="jackson-heights">Jackson Heights</option>
-                  <option value="sunnyside">Sunnyside</option>
-                  <option value="woodside">Woodside</option>
+                  <option value="" data-i18n="list.allhood">All neighborhoods</option>
+                  <option value="astoria-lic" data-i18n="list.h_astorialic">Astoria / LIC</option>
+                  <option value="bayside" data-i18n="list.h_bayside">Bayside</option>
+                  <option value="college-point" data-i18n="list.h_collegepoint">College Point</option>
+                  <option value="elmhurst" data-i18n="list.h_elmhurst">Elmhurst</option>
+                  <option value="flushing" data-i18n="list.h_flushing">Flushing</option>
+                  <option value="fresh-meadows" data-i18n="list.h_freshmeadows">Fresh Meadows</option>
+                  <option value="jackson-heights" data-i18n="list.h_jacksonheights">Jackson Heights</option>
+                  <option value="sunnyside" data-i18n="list.h_sunnyside">Sunnyside</option>
+                  <option value="woodside" data-i18n="list.h_woodside">Woodside</option>
                 </select>
               </div>
               <fieldset class="x-types">
-                <legend class="x-label">Type</legend>
-                <button class="x-type" type="button" data-type="" aria-pressed="true">All</button>
-                <button class="x-type" type="button" data-type="residential" aria-pressed="false">Residential</button>
-                <button class="x-type" type="button" data-type="multi" aria-pressed="false">Multi-Family</button>
-                <button class="x-type" type="button" data-type="commercial" aria-pressed="false">Commercial</button>
-                <button class="x-type" type="button" data-type="condo" aria-pressed="false">Condo/Co-op</button>
-                <button class="x-type" type="button" data-type="rentals" aria-pressed="false">Rentals</button>
-                <button class="x-type" type="button" data-type="land" aria-pressed="false">Lots/Land</button>
+                <legend class="x-label" data-i18n="list.type">Type</legend>
+                <button class="x-type" type="button" data-type="" aria-pressed="true" data-i18n="list.t_all">All</button>
+                <button class="x-type" type="button" data-type="residential" aria-pressed="false" data-i18n="list.t_res">Residential</button>
+                <button class="x-type" type="button" data-type="multi" aria-pressed="false" data-i18n="list.t_multi">Multi-Family</button>
+                <button class="x-type" type="button" data-type="commercial" aria-pressed="false" data-i18n="list.t_com">Commercial</button>
+                <button class="x-type" type="button" data-type="condo" aria-pressed="false" data-i18n="list.t_condo">Condo/Co-op</button>
+                <button class="x-type" type="button" data-type="rentals" aria-pressed="false" data-i18n="list.t_rent">Rentals</button>
+                <button class="x-type" type="button" data-type="land" aria-pressed="false" data-i18n="list.t_land">Lots/Land</button>
               </fieldset>
               <p class="x-count" id="x-count" aria-live="polite">3 of 3 shown</p>
             </form>
@@ -494,7 +507,7 @@
               <article class="x-card x-rv" data-hood="astoria-lic" data-types="residential multi">
                 <figure class="x-card__media">
                   <img src="listing-astoria-4family.jpg" alt="Four-family residence at 23-50 31st Drive, Astoria" loading="lazy" />
-                  <span class="x-badge x-badge--sale">For Sale</span>
+                  <span class="x-badge x-badge--sale" data-i18n="list.badge_sale">For Sale</span>
                 </figure>
                 <p class="x-card__price">$1,998,000</p>
                 <h3>23-50 31st Drive, Astoria</h3>
@@ -503,7 +516,7 @@
               <article class="x-card x-rv d1" data-hood="whitestone" data-types="residential">
                 <figure class="x-card__media">
                   <img src="listing-whitestone.jpg" alt="Single-family home in Whitestone, Queens" loading="lazy" />
-                  <span class="x-badge">Sold</span>
+                  <span class="x-badge" data-i18n="list.badge_sold">Sold</span>
                 </figure>
                 <p class="x-card__price">$2,800,000</p>
                 <h3>Whitestone, Queens</h3>
@@ -512,21 +525,21 @@
               <article class="x-card x-rv d2" data-hood="astoria-lic" data-types="residential">
                 <figure class="x-card__media">
                   <img src="listing-lic.jpg" alt="Interior of a four-bedroom residence in Long Island City" loading="lazy" />
-                  <span class="x-badge">Sold</span>
+                  <span class="x-badge" data-i18n="list.badge_sold">Sold</span>
                 </figure>
                 <p class="x-card__price">$1,150,000</p>
                 <h3>Long Island City</h3>
                 <p class="x-card__meta"><span>4-bedroom residence</span><span>LIC</span></p>
               </article>
               <div class="x-empty" id="x-empty" hidden>
-                <p class="x-h3">No featured listings match that search.</p>
-                <p class="x-small">Our agents know what's coming to market before it's listed.</p>
-                <a class="x-btn x-btn--line" href="#/contact">Ask about current listings</a>
+                <p class="x-h3" data-i18n="list.empty">No featured listings match that search.</p>
+                <p class="x-small" data-i18n="list.empty_sub">Our agents know what's coming to market before it's listed.</p>
+                <a class="x-btn x-btn--line" href="#/contact" data-i18n="list.empty_cta">Ask about current listings</a>
               </div>
             </div>
 
             <div class="x-listfoot">
-              <p>Past closing: <a class="x-link x-link--rest" href="#/contact">18-33 41st Street, Astoria — $2,650,000</a></p>
+              <p>Past closing: < data-i18n="list.past"> class="x-link x-link--rest" href="#/contact">18-33 41st Street, Astoria — $2,650,000</a></p>
               <a class="x-btn x-btn--line" href="#/contact">Ask about current listings</a>
             </div>
           </div>
@@ -535,8 +548,8 @@
           <div class="x-wrap">
             <div class="x-head x-rv">
               <div>
-                <p class="x-eyebrow">02 — What we do</p>
-                <h2 class="x-h2" id="services-title">Every kind of move, <em>one family office.</em></h2>
+                <p class="x-eyebrow" data-i18n="svc.kicker">02 — What we do</p>
+                <h2 class="x-h2" id="services-title" data-i18n="svc.title">Every kind of move, <em>one family office.</em></h2>
               </div>
             </div>
             <div class="x-svc">
@@ -545,31 +558,31 @@
                 <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M5 19 20 6l15 13"/><path d="M9 16v18h22V16"/><path d="M17 34v-9h6v9"/></svg>
                 <small>01</small>
                 <h3 class="x-h3">Residential</h3>
-                <p>Buying and selling homes across Queens, from first apartments to family houses.</p>
+                <p data-i18n="svc.c1d">Buying and selling homes across Queens, from first apartments to family houses.</p>
               </a>
               <article class="x-rv d1">
                 <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M4 34V14l8-6 8 6v20"/><path d="M20 34V10l8-5 8 5v24"/><path d="M2 34h36"/><path d="M9 19h6M9 25h6M25 15h6M25 21h6M25 27h6"/></svg>
                 <small>02</small>
                 <h3 class="x-h3">Multi-Family</h3>
-                <p>Owner-occupied one-to-three family homes and investment buildings.</p>
+                <p data-i18n="svc.c2d">Owner-occupied one-to-three family homes and investment buildings.</p>
               </a>
               <a href="#/commercial" class="x-rv d2 x-svc-link">
                 <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M6 15h28v19H6z"/><path d="M4 15l3-8h26l3 8"/><path d="M4 15c0 2 2 4 4 4s4-2 4-4c0 2 2 4 4 4s4-2 4-4c0 2 2 4 4 4s4-2 4-4c0 2 2 4 4 4s4-2 4-4"/><path d="M11 34v-9h7v9M23 24h7v5h-7z"/></svg>
                 <small>03</small>
-                <h3 class="x-h3">Commercial &amp; Mixed-Use</h3>
-                <p>Storefronts, mixed-use buildings and commercial leasing.</p>
+                <h3 class="x-h3" data-i18n="svc.c3t">Commercial &amp; Mixed-Use</h3>
+                <p data-i18n="svc.c3d">Storefronts, mixed-use buildings and commercial leasing.</p>
               </a>
               <a href="#/rent" class="x-rv d3 x-svc-link">
                 <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="13" cy="20" r="7"/><circle cx="13" cy="20" r="2"/><path d="M20 20h16M30 20v6M35 20v4"/></svg>
                 <small>04</small>
-                <h3 class="x-h3">Rentals &amp; Landlord Services</h3>
-                <p>We find qualified tenants and make renting feel personal, not corporate.</p>
+                <h3 class="x-h3" data-i18n="svc.c4t">Rentals &amp; Landlord Services</h3>
+                <p data-i18n="svc.c4d">We find qualified tenants and make renting feel personal, not corporate.</p>
               </article>
               <article class="x-rv d4">
                 <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M8 34V12h14v22"/><path d="M22 18h10v16"/><path d="M4 34h32"/><path d="M8 6h20M15 6v6M28 6v6"/><path d="M12 17h2M16 17h2M12 22h2M16 22h2M12 27h2M16 27h2M26 23h2M26 28h2"/></svg>
                 <small>05</small>
-                <h3 class="x-h3">New Development</h3>
-                <p>Marketing new construction with 3-D tours, virtual tours and digital campaigns.</p>
+                <h3 class="x-h3" data-i18n="svc.c5t">New Development</h3>
+                <p data-i18n="svc.c5d">Marketing new construction with 3-D tours, virtual tours and digital campaigns.</p>
               </article>
             </div>
           </div>
@@ -577,19 +590,19 @@
 <section class="x-quote" aria-label="Our open-door policy">
           <img src="thirtieth-avenue.jpg" alt="" id="x-parallax" loading="lazy" />
           <figure class="x-quote__in">
-            <blockquote class="x-rv">We have an open-door policy. We're not secret agents.</blockquote>
-            <figcaption class="x-rv d1"><cite>Paul Halvatzis, Broker</cite></figcaption>
-            <p class="x-rv d2">Queens is one of the most diverse places in the world, and we take pride in our agents' multilingual ability.</p>
+            <blockquote class="x-rv" data-i18n="quote.text">We have an open-door policy. We're not secret agents.</blockquote>
+            <figcaption class="x-rv d1"><cite data-i18n="quote.attr">Paul Halvatzis, Broker</cite></figcaption>
+            <p class="x-rv d2" data-i18n="quote.sub">Queens is one of the most diverse places in the world, and we take pride in our agents' multilingual ability.</p>
           </figure>
         </section>
 <section class="x-sec x-sec--cream" id="reviews" aria-labelledby="reviews-title">
           <div class="x-wrap">
             <div class="x-head x-rv">
               <div>
-                <p class="x-eyebrow">03 — Client words</p>
-                <h2 class="x-h2" id="reviews-title">In their <em>words.</em></h2>
+                <p class="x-eyebrow" data-i18n="rev.kicker">03 — Client words</p>
+                <h2 class="x-h2" id="reviews-title" data-i18n="rev.title">In their <em>words.</em></h2>
               </div>
-              <p class="x-lead">5.0★ on Zillow across 299 team reviews.</p>
+              <p class="x-lead" data-i18n="rev.note">5.0★ on Zillow across 299 team reviews.</p>
             </div>
             <div class="x-slider x-rv" id="x-slider" role="region" aria-roledescription="carousel" aria-label="Client testimonials">
               <div class="x-slides">
@@ -624,51 +637,91 @@
             <div class="x-val x-rv">
               <div class="x-val__panel x-on-dark">
                 <div style="display:grid;gap:28px">
-                  <p class="x-eyebrow">06 — Free valuation</p>
-                  <h2 class="x-h2" id="val-title">What is your home <em>worth?</em></h2>
-                  <p>From first contact to the closing date and beyond, the Amorelli team will relentlessly pursue the right solution for your unique goals.</p>
+                  <p class="x-eyebrow" data-i18n="val.kicker">06 — Free valuation</p>
+                  <h2 class="x-h2" id="val-title" data-i18n="val.title">What is your home <em>worth?</em></h2>
+                  <p data-i18n="val.intro">From first contact to the closing date and beyond, the Amorelli team will relentlessly pursue the right solution for your unique goals.</p>
                 </div>
                 <ul class="x-val__list">
-                  <li>Prefer to talk? <a class="x-link x-link--rest" href="tel:7182042828">718-204-2828</a></li>
+                  <li data-i18n="val.talk">Prefer to talk? <a class="x-link x-link--rest" href="tel:7182042828">718-204-2828</a></li>
                   <li><a class="x-link x-link--rest" href="mailto:info@amorellirealty.com">info@amorellirealty.com</a></li>
                 </ul>
               </div>
               <div class="x-val__form">
+                <div class="x-est" id="x-est">
+                  <h3 class="x-h3" data-i18n="est.title">Instant ballpark estimate</h3>
+                  <p class="x-small" data-i18n="est.sub">Three questions, one ballpark range. For a precise number, send the full form below.</p>
+                  <div class="x-grid3">
+                    <div class="x-field">
+                      <label class="x-label" for="e-hood" data-i18n="list.hood">Neighborhood</label>
+                      <select class="x-select" id="e-hood">
+                        <option value="1050" data-i18n="list.h_astorialic">Astoria / LIC</option>
+                        <option value="880" data-i18n="list.h_sunnyside">Sunnyside</option>
+                        <option value="820" data-i18n="list.h_flushing">Flushing</option>
+                        <option value="800" data-i18n="list.h_woodside">Woodside</option>
+                        <option value="780" data-i18n="list.h_elmhurst">Elmhurst</option>
+                        <option value="750" data-i18n="list.h_jacksonheights">Jackson Heights</option>
+                        <option value="740" data-i18n="list.h_freshmeadows">Fresh Meadows</option>
+                        <option value="720" data-i18n="list.h_bayside">Bayside</option>
+                        <option value="700" data-i18n="list.h_collegepoint">College Point</option>
+                      </select>
+                    </div>
+                    <div class="x-field">
+                      <label class="x-label" for="e-type" data-i18n="f.ptype">Property type</label>
+                      <select class="x-select" id="e-type">
+                        <option value="1" data-i18n="f.single">Single-family</option>
+                        <option value="1.25" data-i18n="f.multi">Multi-family</option>
+                        <option value="0.95" data-i18n="f.condo">Condo/Co-op</option>
+                        <option value="1.1" data-i18n="f.comtype">Commercial</option>
+                      </select>
+                    </div>
+                    <div class="x-field">
+                      <label class="x-label" for="e-sqft" data-i18n="est.sqft">Approx. interior sq ft</label>
+                      <input class="x-input" id="e-sqft" inputmode="numeric" placeholder="1500" />
+                    </div>
+                  </div>
+                  <button class="x-btn" type="button" id="e-go" data-i18n="est.go">Get my estimate</button>
+                  <div class="x-est__out" id="e-out" hidden>
+                    <p class="x-eyebrow" data-i18n="est.outk">Your ballpark estimate</p>
+                    <p class="x-est__range" id="e-range"></p>
+                    <p class="x-small" data-i18n="est.disclaimer">A ballpark based on recent Queens sales per square foot — not an appraisal. Condition, layout and the block itself move the real number.</p>
+                    <button class="x-btn x-btn--line" type="button" id="e-full" data-i18n="est.full">Get my full valuation</button>
+                  </div>
+                </div>
                 <form id="x-form" novalidate>
                   <div class="x-tabs" role="tablist" aria-label="I am">
-                    <button class="x-tab" type="button" role="tab" id="tab-sell" aria-controls="panel-sell" aria-selected="true">Selling</button>
-                    <button class="x-tab" type="button" role="tab" id="tab-buy" aria-controls="panel-buy" aria-selected="false" tabindex="-1">Buying</button>
+                    <button class="x-tab" type="button" role="tab" id="tab-sell" aria-controls="panel-sell" aria-selected="true" data-i18n="val.tab_sell">Selling</button>
+                    <button class="x-tab" type="button" role="tab" id="tab-buy" aria-controls="panel-buy" aria-selected="false" tabindex="-1" data-i18n="val.tab_buy">Buying</button>
                   </div>
                   <fieldset class="x-grid" id="panel-sell" role="tabpanel" aria-labelledby="tab-sell">
-                    <div class="x-field"><label class="x-label" for="s-name">Name</label><input class="x-input" id="s-name" name="name" autocomplete="name" required /></div>
-                    <div class="x-field"><label class="x-label" for="s-phone">Phone</label><input class="x-input" id="s-phone" name="phone" type="tel" autocomplete="tel" /></div>
-                    <div class="x-field x-full"><label class="x-label" for="s-email">Email</label><input class="x-input" id="s-email" name="email" type="email" autocomplete="email" required /></div>
-                    <div class="x-field"><label class="x-label" for="s-addr">Property address</label><input class="x-input" id="s-addr" name="address" autocomplete="street-address" /></div>
+                    <div class="x-field"><label class="x-label" for="s-name" data-i18n="f.name">Name</label><input class="x-input" id="s-name" name="name" autocomplete="name" required /></div>
+                    <div class="x-field"><label class="x-label" for="s-phone" data-i18n="f.phone">Phone</label><input class="x-input" id="s-phone" name="phone" type="tel" autocomplete="tel" /></div>
+                    <div class="x-field x-full"><label class="x-label" for="s-email" data-i18n="f.email">Email</label><input class="x-input" id="s-email" name="email" type="email" autocomplete="email" required /></div>
+                    <div class="x-field"><label class="x-label" for="s-addr" data-i18n="f.address">Property address</label><input class="x-input" id="s-addr" name="address" autocomplete="street-address" /></div>
                     <div class="x-field">
-                      <label class="x-label" for="s-type">Property type</label>
+                      <label class="x-label" for="s-type" data-i18n="f.ptype">Property type</label>
                       <select class="x-select" id="s-type" name="type">
-                        <option>Single-family</option><option>Multi-family</option><option>Condo/Co-op</option><option>Commercial</option><option>Land</option>
+                        <option data-i18n="f.single">Single-family</option><option data-i18n="f.multi">Multi-family</option><option>Condo/Co-op</option><option>Commercial</option><option data-i18n="f.land">Land</option>
                       </select>
                     </div>
                     <div class="x-grid4">
-                      <div class="x-field"><label class="x-label" for="s-bed">Bedrooms</label><input class="x-input" id="s-bed" name="bedrooms" inputmode="numeric" /></div>
-                      <div class="x-field"><label class="x-label" for="s-bath">Bathrooms</label><input class="x-input" id="s-bath" name="bathrooms" inputmode="decimal" /></div>
-                      <div class="x-field"><label class="x-label" for="s-lot">Lot size</label><input class="x-input" id="s-lot" name="lot" /></div>
-                      <div class="x-field"><label class="x-label" for="s-year">Year built</label><input class="x-input" id="s-year" name="year" inputmode="numeric" /></div>
+                      <div class="x-field"><label class="x-label" for="s-bed" data-i18n="f.beds">Bedrooms</label><input class="x-input" id="s-bed" name="bedrooms" inputmode="numeric" /></div>
+                      <div class="x-field"><label class="x-label" for="s-bath" data-i18n="f.baths">Bathrooms</label><input class="x-input" id="s-bath" name="bathrooms" inputmode="decimal" /></div>
+                      <div class="x-field"><label class="x-label" for="s-lot" data-i18n="f.lot">Lot size</label><input class="x-input" id="s-lot" name="lot" /></div>
+                      <div class="x-field"><label class="x-label" for="s-year" data-i18n="f.year">Year built</label><input class="x-input" id="s-year" name="year" inputmode="numeric" /></div>
                     </div>
-                    <div class="x-field x-full"><label class="x-label" for="s-msg">Message</label><textarea class="x-input" id="s-msg" name="message"></textarea></div>
+                    <div class="x-field x-full"><label class="x-label" for="s-msg" data-i18n="f.msg">Message</label><textarea class="x-input" id="s-msg" name="message"></textarea></div>
                   </fieldset>
                   <fieldset class="x-grid" id="panel-buy" role="tabpanel" aria-labelledby="tab-buy" hidden disabled>
-                    <div class="x-field"><label class="x-label" for="b-name">Name</label><input class="x-input" id="b-name" name="name" autocomplete="name" required /></div>
-                    <div class="x-field"><label class="x-label" for="b-phone">Phone</label><input class="x-input" id="b-phone" name="phone" type="tel" autocomplete="tel" /></div>
-                    <div class="x-field x-full"><label class="x-label" for="b-email">Email</label><input class="x-input" id="b-email" name="email" type="email" autocomplete="email" required /></div>
-                    <div class="x-field"><label class="x-label" for="b-areas">Preferred areas</label><input class="x-input" id="b-areas" name="areas" /></div>
-                    <div class="x-field"><label class="x-label" for="b-price">Price range</label><input class="x-input" id="b-price" name="price" /></div>
-                    <div class="x-field x-full"><label class="x-label" for="b-msg">Message</label><textarea class="x-input" id="b-msg" name="message"></textarea></div>
+                    <div class="x-field"><label class="x-label" for="b-name" data-i18n="f.name">Name</label><input class="x-input" id="b-name" name="name" autocomplete="name" required /></div>
+                    <div class="x-field"><label class="x-label" for="b-phone" data-i18n="f.phone">Phone</label><input class="x-input" id="b-phone" name="phone" type="tel" autocomplete="tel" /></div>
+                    <div class="x-field x-full"><label class="x-label" for="b-email" data-i18n="f.email">Email</label><input class="x-input" id="b-email" name="email" type="email" autocomplete="email" required /></div>
+                    <div class="x-field"><label class="x-label" for="b-areas" data-i18n="f.areas">Preferred areas</label><input class="x-input" id="b-areas" name="areas" /></div>
+                    <div class="x-field"><label class="x-label" for="b-price" data-i18n="f.price">Price range</label><input class="x-input" id="b-price" name="price" /></div>
+                    <div class="x-field x-full"><label class="x-label" for="b-msg" data-i18n="f.msg">Message</label><textarea class="x-input" id="b-msg" name="message"></textarea></div>
                   </fieldset>
                   <div class="x-submit">
-                    <p class="x-small" id="x-form-note">We reply within one business day.</p>
-                    <button class="x-btn" type="submit" id="x-submit">Request my valuation</button>
+                    <p class="x-small" id="x-form-note" data-i18n="val.note">We reply within one business day.</p>
+                    <button class="x-btn" type="submit" id="x-submit" data-i18n="val.submit">Request my valuation</button>
                   </div>
                 </form>
                 <div class="x-thanks" id="x-thanks" hidden tabindex="-1">
@@ -676,7 +729,7 @@
                   <p class="x-eyebrow">Received</p>
                   <h3 class="x-h3" id="x-thanks-title">Thank you. We'll be in touch shortly.</h3>
                   <p class="x-small">A member of the Halvatzis team will follow up personally. For anything urgent, call <a class="x-link x-link--rest" href="tel:7182042828">718-204-2828</a>.</p>
-                  <button class="x-btn x-btn--line" type="button" id="x-again">Send another request</button>
+                  <button class="x-btn x-btn--line" type="button" id="x-again" data-i18n="val.again">Send another request</button>
                 </div>
               </div>
             </div>
@@ -684,11 +737,11 @@
         </section>
 <section class="x-dark x-close-cta" aria-labelledby="close-title">
           <div class="x-rv">
-            <p class="x-eyebrow">Amorelli Realty · Est. 1978</p>
-            <h2 class="x-h2" id="close-title">Let's talk about <em>your next move.</em></h2>
+            <p class="x-eyebrow" data-i18n="cta.kicker">Amorelli Realty · Est. 1978</p>
+            <h2 class="x-h2" id="close-title" data-i18n="cta.title">Let's talk about <em>your next move.</em></h2>
             <div class="x-btns">
-              <a class="x-btn" href="#/valuation">Free valuation</a>
-              <a class="x-btn x-btn--line" href="tel:7182042828">Call 718-204-2828</a>
+              <a class="x-btn" href="#/valuation" data-i18n="cta.val">Free valuation</a>
+              <a class="x-btn x-btn--line" href="tel:7182042828" data-i18n="cta.call">Call 718-204-2828</a>
             </div>
           </div>
         </section>
@@ -697,25 +750,25 @@
 <section class="x-sec x-phero">
   <div class="x-wrap">
     <p class="x-eyebrow x-rv">Buying</p>
-    <h1 class="x-h2 x-rv d1">Find your place <em>in Queens.</em></h1>
-    <p class="x-lead x-rv d2">From first apartments to family houses, three generations of the Halvatzis family have helped Queens buy. Tell us what you are looking for, and we will do the legwork.</p>
+    <h1 data-i18n="buy.title" class="x-h2 x-rv d1">Find your place <em>in Queens.</em></h1>
+    <p class="x-lead x-rv d2" data-i18n="buy.lead">From first apartments to family houses, three generations of the Halvatzis family have helped Queens buy. Tell us what you are looking for, and we will do the legwork.</p>
   </div>
 </section><section class="x-sec">
   <div class="x-wrap">
-    <p class="x-eyebrow x-rv">How it works</p>
+    <p class="x-eyebrow x-rv" data-i18n="buy.s_kicker">How it works</p>
     <h2 class="x-h2 x-rv d1">Buying, <em>the personal way.</em></h2>
-    <p class="x-rv d2">Start with our buyer intake: your preferred areas and your price range. We match you to homes worth seeing, arrange the viewings, and walk with you to closing.</p>
+    <p class="x-rv d2" data-i18n="buy.s_intro">Start with our buyer intake: your preferred areas and your price range. We match you to homes worth seeing, arrange the viewings, and walk with you to closing.</p>
 <div class="x-feats">
   <div class="x-feat x-rv d0">
-    <h3 class="x-h3">Your areas, your budget</h3>
-    <p>Astoria, Long Island City, Bayside, College Point, Elmhurst, Flushing, Fresh Meadows, Jackson Heights, Sunnyside, Woodside: tell us where, and what you can spend.</p>
+    <h3 class="x-h3" data-i18n="buy.f1t">Your areas, your budget</h3>
+    <p data-i18n="buy.f1d">Astoria, Long Island City, Bayside, College Point, Elmhurst, Flushing, Fresh Meadows, Jackson Heights, Sunnyside, Woodside: tell us where, and what you can spend.</p>
   </div>
   <div class="x-feat x-rv d1">
-    <h3 class="x-h3">An open door, not a sales pitch</h3>
+    <h3 class="x-h3" data-i18n="buy.f2t">An open door, not a sales pitch</h3>
     <p>“We’re not secret agents. We’re available.” Paul Halvatzis, broker. Call, walk in, or message: a real person answers.</p>
   </div>
   <div class="x-feat x-rv d2">
-    <h3 class="x-h3">A team that speaks your language</h3>
+    <h3 class="x-h3" data-i18n="buy.f3t">A team that speaks your language</h3>
     <p>Queens is one of the most diverse places in the world, and our multilingual agents take pride in meeting every buyer where they are.</p>
   </div>
 </div>
@@ -723,11 +776,11 @@
 </section>
 <section class="x-dark x-close-cta">
           <div class="x-rv">
-            <p class="x-eyebrow">Amorelli Realty · Est. 1978</p>
+            <p class="x-eyebrow" data-i18n="cta.kicker">Amorelli Realty · Est. 1978</p>
             <h2 class="x-h2">Let's talk about <em>your next move.</em></h2>
             <div class="x-btns">
-              <a class="x-btn" href="#/valuation">Free valuation</a>
-              <a class="x-btn x-btn--line" href="tel:7182042828">Call 718-204-2828</a>
+              <a class="x-btn" href="#/valuation" data-i18n="cta.val">Free valuation</a>
+              <a class="x-btn x-btn--line" href="tel:7182042828" data-i18n="cta.call">Call 718-204-2828</a>
             </div>
           </div>
         </section>
@@ -736,37 +789,37 @@
 <section class="x-sec x-phero">
   <div class="x-wrap">
     <p class="x-eyebrow x-rv">Selling</p>
-    <h1 class="x-h2 x-rv d1">Sell with Queens’ <em>most awarded team.</em></h1>
-    <p class="x-lead x-rv d2">275+ career sales at a $1.2M average price, with 34 sales in the last 12 months. When it is time to sell, that record works for you.</p>
+    <h1 data-i18n="sell.title" class="x-h2 x-rv d1">Sell with Queens’ <em>most awarded team.</em></h1>
+    <p class="x-lead x-rv d2" data-i18n="sell.lead">275+ career sales at a $1.2M average price, with 34 sales in the last 12 months. When it is time to sell, that record works for you.</p>
   </div>
 </section><section class="x-sec">
   <div class="x-wrap">
-    <p class="x-eyebrow x-rv">What you get</p>
+    <p class="x-eyebrow x-rv" data-i18n="sell.s_kicker">What you get</p>
     <h2 class="x-h2 x-rv d1">A valuation, <em>then a plan.</em></h2>
-    <p class="x-rv d2">Start with a free home valuation. Our seller intake covers property type, bedrooms, baths, lot size and year built, so the number we give you is grounded, not guessed.</p>
+    <p class="x-rv d2" data-i18n="sell.s_intro">Start with a free home valuation. Our seller intake covers property type, bedrooms, baths, lot size and year built, so the number we give you is grounded, not guessed.</p>
 <div class="x-feats">
   <div class="x-feat x-rv d0">
-    <h3 class="x-h3">Marketed like it matters</h3>
-    <p>Virtual tours, 3-D tours, digital campaigns and classic flyers: your home shown at its best, everywhere buyers look.</p>
+    <h3 class="x-h3" data-i18n="sell.f1t">Marketed like it matters</h3>
+    <p data-i18n="sell.f1d">Virtual tours, 3-D tours, digital campaigns and classic flyers: your home shown at its best, everywhere buyers look.</p>
   </div>
   <div class="x-feat x-rv d1">
-    <h3 class="x-h3">Recent closings</h3>
+    <h3 class="x-h3" data-i18n="sell.f2t">Recent closings</h3>
     <p>$2,800,000 in Whitestone. $1,150,000 for a Long Island City four-bedroom. $1,998,000 for an Astoria four-family.</p>
   </div>
   <div class="x-feat x-rv d2">
-    <h3 class="x-h3">Ten years of trust</h3>
-    <p>Voted Queens’ Best Real Estate Agency ten years running (2017-2026). Sellers choose the name their neighbors already trust.</p>
+    <h3 class="x-h3" data-i18n="sell.f3t">Ten years of trust</h3>
+    <p data-i18n="sell.f3d">Voted Queens’ Best Real Estate Agency ten years running (2017-2026). Sellers choose the name their neighbors already trust.</p>
   </div>
 </div>
   </div>
 </section>
 <section class="x-dark x-close-cta">
           <div class="x-rv">
-            <p class="x-eyebrow">Amorelli Realty · Est. 1978</p>
+            <p class="x-eyebrow" data-i18n="cta.kicker">Amorelli Realty · Est. 1978</p>
             <h2 class="x-h2">Let's talk about <em>your next move.</em></h2>
             <div class="x-btns">
-              <a class="x-btn" href="#/valuation">Free valuation</a>
-              <a class="x-btn x-btn--line" href="tel:7182042828">Call 718-204-2828</a>
+              <a class="x-btn" href="#/valuation" data-i18n="cta.val">Free valuation</a>
+              <a class="x-btn x-btn--line" href="tel:7182042828" data-i18n="cta.call">Call 718-204-2828</a>
             </div>
           </div>
         </section>
@@ -774,38 +827,38 @@
 <div class="x-page" data-page="rent">
 <section class="x-sec x-phero">
   <div class="x-wrap">
-    <p class="x-eyebrow x-rv">Renting</p>
-    <h1 class="x-h2 x-rv d1">Renting, <em>the personal way.</em></h1>
-    <p class="x-lead x-rv d2">Some realtors really care about their neighborhoods. Our renters say it best: working with us feels personal, not corporate.</p>
+    <p class="x-eyebrow x-rv" data-i18n="rent.kicker">Renting</p>
+    <h1 data-i18n="rent.title" class="x-h2 x-rv d1">Renting, <em>the personal way.</em></h1>
+    <p class="x-lead x-rv d2" data-i18n="rent.lead">Some realtors really care about their neighborhoods. Our renters say it best: working with us feels personal, not corporate.</p>
   </div>
 </section><section class="x-sec">
   <div class="x-wrap">
-    <p class="x-eyebrow x-rv">For renters and landlords</p>
+    <p class="x-eyebrow x-rv" data-i18n="rent.s_kicker">For renters and landlords</p>
     <h2 class="x-h2 x-rv d1">One office, <em>both sides of the lease.</em></h2>
-    <p class="x-rv d2">Looking for a place, or looking for the right tenant? Either way you get the same open-door team.</p>
+    <p class="x-rv d2" data-i18n="rent.s_intro">Looking for a place, or looking for the right tenant? Either way you get the same open-door team.</p>
 <div class="x-feats">
   <div class="x-feat x-rv d0">
-    <h3 class="x-h3">For renters</h3>
-    <p>From first contact to lease signing, a real person guides you: viewings, applications and honest answers about every block.</p>
+    <h3 class="x-h3" data-i18n="rent.f1t">For renters</h3>
+    <p data-i18n="rent.f1d">From first contact to lease signing, a real person guides you: viewings, applications and honest answers about every block.</p>
   </div>
   <div class="x-feat x-rv d1">
-    <h3 class="x-h3">For landlords</h3>
-    <p>We find qualified tenants for your property, from single-family homes to multi-family buildings, and make the process painless.</p>
+    <h3 class="x-h3" data-i18n="rent.f2t">For landlords</h3>
+    <p data-i18n="rent.f2d">We find qualified tenants for your property, from single-family homes to multi-family buildings, and make the process painless.</p>
   </div>
   <div class="x-feat x-rv d2">
-    <h3 class="x-h3">Commercial space too</h3>
-    <p>Need a storefront or commercial unit? Our team leases commercial space across Queens, fast.</p>
+    <h3 class="x-h3" data-i18n="rent.f3t">Commercial space too</h3>
+    <p data-i18n="rent.f3d">Need a storefront or commercial unit? Our team leases commercial space across Queens, fast.</p>
   </div>
 </div>
   </div>
 </section>
 <section class="x-dark x-close-cta">
           <div class="x-rv">
-            <p class="x-eyebrow">Amorelli Realty · Est. 1978</p>
+            <p class="x-eyebrow" data-i18n="cta.kicker">Amorelli Realty · Est. 1978</p>
             <h2 class="x-h2">Let's talk about <em>your next move.</em></h2>
             <div class="x-btns">
-              <a class="x-btn" href="#/valuation">Free valuation</a>
-              <a class="x-btn x-btn--line" href="tel:7182042828">Call 718-204-2828</a>
+              <a class="x-btn" href="#/valuation" data-i18n="cta.val">Free valuation</a>
+              <a class="x-btn x-btn--line" href="tel:7182042828" data-i18n="cta.call">Call 718-204-2828</a>
             </div>
           </div>
         </section>
@@ -814,37 +867,37 @@
 <section class="x-sec x-phero">
   <div class="x-wrap">
     <p class="x-eyebrow x-rv">Commercial</p>
-    <h1 class="x-h2 x-rv d1">Queens commercial, <em>handled by locals.</em></h1>
-    <p class="x-lead x-rv d2">Storefronts, mixed-use buildings, investment properties and commercial leasing: with 48 years of Queens street knowledge behind every deal.</p>
+    <h1 data-i18n="commercial.title" class="x-h2 x-rv d1">Queens commercial, <em>handled by locals.</em></h1>
+    <p class="x-lead x-rv d2" data-i18n="commercial.lead">Storefronts, mixed-use buildings, investment properties and commercial leasing: with 48 years of Queens street knowledge behind every deal.</p>
   </div>
 </section><section class="x-sec">
   <div class="x-wrap">
-    <p class="x-eyebrow x-rv">What we handle</p>
+    <p class="x-eyebrow x-rv" data-i18n="com.s_kicker">What we handle</p>
     <h2 class="x-h2 x-rv d1">Serious property, <em>serious representation.</em></h2>
-    <p class="x-rv d2">Whether you are buying your first investment building or leasing out commercial space, you get a team that knows these blocks cold.</p>
+    <p class="x-rv d2" data-i18n="com.s_intro">Whether you are buying your first investment building or leasing out commercial space, you get a team that knows these blocks cold.</p>
 <div class="x-feats">
   <div class="x-feat x-rv d0">
-    <h3 class="x-h3">Investment properties</h3>
-    <p>Buyer and listing representation for multi-family and mixed-use investment properties across Queens.</p>
+    <h3 class="x-h3" data-i18n="com.f1t">Investment properties</h3>
+    <p data-i18n="com.f1d">Buyer and listing representation for multi-family and mixed-use investment properties across Queens.</p>
   </div>
   <div class="x-feat x-rv d1">
-    <h3 class="x-h3">Commercial leasing</h3>
-    <p>Storefronts and commercial units, marketed and leased with the same care as our residential listings.</p>
+    <h3 class="x-h3" data-i18n="com.f2t">Commercial leasing</h3>
+    <p data-i18n="com.f2d">Storefronts and commercial units, marketed and leased with the same care as our residential listings.</p>
   </div>
   <div class="x-feat x-rv d2">
-    <h3 class="x-h3">Landlord services</h3>
-    <p>Tenant placement and leasing support for commercial landlords who want it handled properly.</p>
+    <h3 class="x-h3" data-i18n="com.f3t">Landlord services</h3>
+    <p data-i18n="com.f3d">Tenant placement and leasing support for commercial landlords who want it handled properly.</p>
   </div>
 </div>
   </div>
 </section>
 <section class="x-dark x-close-cta">
           <div class="x-rv">
-            <p class="x-eyebrow">Amorelli Realty · Est. 1978</p>
+            <p class="x-eyebrow" data-i18n="cta.kicker">Amorelli Realty · Est. 1978</p>
             <h2 class="x-h2">Let's talk about <em>your next move.</em></h2>
             <div class="x-btns">
-              <a class="x-btn" href="#/valuation">Free valuation</a>
-              <a class="x-btn x-btn--line" href="tel:7182042828">Call 718-204-2828</a>
+              <a class="x-btn" href="#/valuation" data-i18n="cta.val">Free valuation</a>
+              <a class="x-btn x-btn--line" href="tel:7182042828" data-i18n="cta.call">Call 718-204-2828</a>
             </div>
           </div>
         </section>
@@ -858,9 +911,9 @@
                 <figcaption>The office at 36-01 30th Avenue</figcaption>
               </figure>
               <div class="x-story__copy">
-                <p class="x-eyebrow x-rv">01 — Our Story</p>
+                <p class="x-eyebrow x-rv" data-i18n="story.kicker">01 — Our Story</p>
                 <h2 class="x-h2 x-rv d1" id="story-title">Powerful &amp; proven <em>since 1978.</em></h2>
-                <p class="x-rv d2">Amorelli Realty has been a staple in Astoria, Queens for over 40 years. In 1978 Anita Halvatzis purchased the company and, with the help of her two sons Paul and Jim, grew it into one of the most successful offices in the borough.</p>
+                <p class="x-rv d2" data-i18n="story.intro">Amorelli Realty has been a staple in Astoria, Queens for over 40 years. In 1978 Anita Halvatzis purchased the company and, with the help of her two sons Paul and Jim, grew it into one of the most successful offices in the borough.</p>
                 <p class="x-rv d3">In 1982 Anita had a vision that one day 30th Avenue would be the key central spot of Astoria. That vision has become a reality, with Astoria and LIC now a vibrant, welcoming hub for young professionals and families alike.</p>
               </div>
             </div>
@@ -901,10 +954,10 @@
           <div class="x-wrap">
             <div class="x-head x-rv">
               <div>
-                <p class="x-eyebrow">05 — Recognition</p>
+                <p class="x-eyebrow" data-i18n="rec.kicker">05 — Recognition</p>
                 <h2 class="x-h2" id="rec-title">Ten years running, <em>Best of the Boro.</em></h2>
               </div>
-              <p class="x-lead">Best Real Estate Agency in Queens, every year from 2017 to 2026.</p>
+              <p class="x-lead" data-i18n="rec.intro">Best Real Estate Agency in Queens, every year from 2017 to 2026.</p>
             </div>
             <ol class="x-laurels x-rv" aria-label="Best of the Boro wins">
               <li><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#x-laurel" /></svg><b>2017</b><span>Best of the Boro</span></li>
@@ -935,11 +988,11 @@
         </section>
 <section class="x-dark x-close-cta">
           <div class="x-rv">
-            <p class="x-eyebrow">Amorelli Realty · Est. 1978</p>
+            <p class="x-eyebrow" data-i18n="cta.kicker">Amorelli Realty · Est. 1978</p>
             <h2 class="x-h2">Let's talk about <em>your next move.</em></h2>
             <div class="x-btns">
-              <a class="x-btn" href="#/valuation">Free valuation</a>
-              <a class="x-btn x-btn--line" href="tel:7182042828">Call 718-204-2828</a>
+              <a class="x-btn" href="#/valuation" data-i18n="cta.val">Free valuation</a>
+              <a class="x-btn x-btn--line" href="tel:7182042828" data-i18n="cta.call">Call 718-204-2828</a>
             </div>
           </div>
         </section>
@@ -949,7 +1002,7 @@
           <div class="x-wrap">
             <div class="x-head x-rv">
               <div>
-                <p class="x-eyebrow">04 — The family &amp; the team</p>
+                <p class="x-eyebrow" data-i18n="team.kicker">04 — The family &amp; the team</p>
                 <h2 class="x-h2" id="team-title">Three generations, <em>one front door.</em></h2>
               </div>
             </div>
@@ -986,8 +1039,8 @@
               </article>
             </div>
             <div class="x-agents-h x-rv">
-              <h3 class="x-h3">Our agents</h3>
-              <p class="x-small">Multilingual, and rooted in Queens.</p>
+              <h3 class="x-h3" data-i18n="team.agents_h">Our agents</h3>
+              <p class="x-small" data-i18n="team.intro">Multilingual, and rooted in Queens.</p>
             </div>
             <ul class="x-agents x-rv">
               <li><span class="x-ini" aria-hidden="true">JV</span><span><b>Joseph Vaccaro</b><small>Best Real Estate Agent 2020–2022</small></span></li>
@@ -1005,11 +1058,11 @@
         </section>
 <section class="x-dark x-close-cta">
           <div class="x-rv">
-            <p class="x-eyebrow">Amorelli Realty · Est. 1978</p>
+            <p class="x-eyebrow" data-i18n="cta.kicker">Amorelli Realty · Est. 1978</p>
             <h2 class="x-h2">Let's talk about <em>your next move.</em></h2>
             <div class="x-btns">
-              <a class="x-btn" href="#/valuation">Free valuation</a>
-              <a class="x-btn x-btn--line" href="tel:7182042828">Call 718-204-2828</a>
+              <a class="x-btn" href="#/valuation" data-i18n="cta.val">Free valuation</a>
+              <a class="x-btn x-btn--line" href="tel:7182042828" data-i18n="cta.call">Call 718-204-2828</a>
             </div>
           </div>
         </section>
@@ -1019,23 +1072,23 @@
           <div class="x-wrap">
             <div class="x-head x-rv">
               <div>
-                <p class="x-eyebrow">07 — Visit us</p>
+                <p class="x-eyebrow" data-i18n="contact.kicker">07 — Visit us</p>
                 <h2 class="x-h2" id="contact-title">Come by <em>30th Avenue.</em></h2>
               </div>
             </div>
             <div class="x-contact">
               <div class="x-office x-rv">
-                <address>36-01 30th Avenue, Astoria, NY 11103<em>Look for the blue awning.</em></address>
+                <address>36-01 30th Avenue, Astoria, NY 11103<em data-i18n="contact.addr_note">Look for the blue awning.</em></address>
                 <dl class="x-dl">
                   <dt>Phone</dt><dd><a class="x-link x-link--rest" href="tel:7182042828">718-204-2828</a></dd>
                   <dt>Fax</dt><dd>718-662-2345</dd>
                   <dt>Email</dt><dd><a class="x-link x-link--rest" href="mailto:info@amorellirealty.com">info@amorellirealty.com</a></dd>
-                  <dt>Mon–Fri</dt><dd>9:00 AM–7:30 PM</dd>
-                  <dt>Sat–Sun</dt><dd>10:00 AM–6:00 PM</dd>
+                  <dt data-i18n="contact.hours_wd">Mon–Fri</dt><dd>9:00 AM–7:30 PM</dd>
+                  <dt data-i18n="contact.hours_we">Sat–Sun</dt><dd>10:00 AM–6:00 PM</dd>
                 </dl>
                 <div class="x-btns">
-                  <a class="x-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=36-01%2030th%20Ave%2C%20Astoria%2C%20NY%2011103" target="_blank" rel="noopener">Get directions</a>
-                  <a class="x-btn x-btn--line" href="tel:7182042828">Call the office</a>
+                  <a class="x-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=36-01%2030th%20Ave%2C%20Astoria%2C%20NY%2011103" target="_blank" rel="noopener" data-i18n="contact.directions">Get directions</a>
+                  <a class="x-btn x-btn--line" href="tel:7182042828" data-i18n="contact.call">Call the office</a>
                 </div>
               </div>
               <div class="x-map x-rv d1">
@@ -1046,11 +1099,11 @@
         </section>
 <section class="x-dark x-close-cta">
           <div class="x-rv">
-            <p class="x-eyebrow">Amorelli Realty · Est. 1978</p>
+            <p class="x-eyebrow" data-i18n="cta.kicker">Amorelli Realty · Est. 1978</p>
             <h2 class="x-h2">Let's talk about <em>your next move.</em></h2>
             <div class="x-btns">
-              <a class="x-btn" href="#/valuation">Free valuation</a>
-              <a class="x-btn x-btn--line" href="tel:7182042828">Call 718-204-2828</a>
+              <a class="x-btn" href="#/valuation" data-i18n="cta.val">Free valuation</a>
+              <a class="x-btn x-btn--line" href="tel:7182042828" data-i18n="cta.call">Call 718-204-2828</a>
             </div>
           </div>
         </section>
@@ -1061,17 +1114,17 @@
           <div class="x-foot__grid">
             <div class="x-foot__about">
               <a class="x-mark" href="#/" aria-label="Amorelli Realty, back to top"><b>AMORELLI</b><span>REALTY · EST. 1978</span></a>
-              <p>Astoria NY based, family owned real estate brokerage specializing in Queens residential, commercial &amp; rental properties since 1978.</p>
+              <p data-i18n="foot.about">Astoria NY based, family owned real estate brokerage specializing in Queens residential, commercial &amp; rental properties since 1978.</p>
             </div>
             <nav aria-label="Explore">
-              <h2>Explore</h2>
+              <h2 data-i18n="foot.explore">Explore</h2>
               <ul>
-                <li><a href="#/listings">Listings</a></li>
-                <li><a href="#/services">What we do</a></li>
-                <li><a href="#/story">Our Story</a></li>
-                <li><a href="#/team">Team</a></li>
+                <li><a href="#/listings" data-i18n="foot.listings">Listings</a></li>
+                <li><a href="#/services" data-i18n="foot.services">What we do</a></li>
+                <li><a href="#/story" data-i18n="nav.story">Our Story</a></li>
+                <li><a href="#/team" data-i18n="nav.team">Team</a></li>
                 <li><a href="#/valuation">Free Valuation</a></li>
-                <li><a href="#/contact">Contact</a></li>
+                <li><a href="#/contact" data-i18n="nav.contact">Contact</a></li>
               </ul>
             </nav>
             <div>
@@ -1084,7 +1137,7 @@
               </ul>
             </div>
             <div>
-              <h2>Social</h2>
+              <h2 data-i18n="foot.social">Social</h2>
               <ul>
                 <li><a href="https://www.facebook.com/AmorelliRealty" target="_blank" rel="noopener">Facebook</a></li>
                 <li><a href="https://www.instagram.com/amorellirealty/" target="_blank" rel="noopener">Instagram</a></li>
@@ -1092,8 +1145,8 @@
             </div>
           </div>
           <div class="x-foot__base">
-            <p>Equal Housing Opportunity</p>
-            <p>© 2026 Amorelli Realty LLC</p>
+            <p data-i18n="foot.equal">Equal Housing Opportunity</p>
+            <p data-i18n="foot.rights">© 2026 Amorelli Realty LLC</p>
             
           </div>
         </div>
@@ -1306,6 +1359,89 @@
         }
         window.addEventListener('hashchange', route);
         route();
+      })();
+
+    </script>
+      <script src="i18n.js"></script>
+      <script>
+      /* ---- listings filter ---- */
+      (function () {
+        var d = document;
+        var form = d.getElementById('x-filter');
+        if (!form) return;
+        var hood = d.getElementById('f-hood');
+        var types = Array.prototype.slice.call(form.querySelectorAll('.x-type'));
+        var cards = Array.prototype.slice.call(d.querySelectorAll('.x-card'));
+        var count = d.getElementById('x-count');
+        var empty = d.getElementById('x-empty');
+        var curType = '';
+        function tpl(s, t) {
+          var lang = 'en';
+          try { lang = localStorage.getItem('amorelli-lang') || 'en'; } catch (e) {}
+          var templates = {
+            en: s + ' of ' + t + ' shown',
+            es: s + ' de ' + t + ' mostradas',
+            zh: '\u5171 ' + t + ' \u6761\uff0c\u663e\u793a ' + s + ' \u6761',
+            el: s + ' \u03b1\u03c0\u03cc ' + t + ' \u03b5\u03bc\u03c6\u03b1\u03bd\u03af\u03b6\u03bf\u03bd\u03c4\u03b1\u03b9',
+            bn: t + '\u099f\u09bf\u09b0 \u09ae\u09a7\u09cd\u09af\u09c7 ' + s + '\u099f\u09bf \u09a6\u09c7\u0996\u09be\u09a8\u09cb \u09b9\u099a\u09cd\u099b\u09c7'
+          };
+          return templates[lang] || templates.en;
+        }
+        function apply() {
+          var h = hood.value, shown = 0;
+          cards.forEach(function (c) {
+            var okH = !h || c.getAttribute('data-hood') === h;
+            var okT = !curType || (c.getAttribute('data-types') || '').split(' ').indexOf(curType) >= 0;
+            var show = okH && okT;
+            c.hidden = !show;
+            if (show) shown++;
+          });
+          count.textContent = tpl(shown, cards.length);
+          if (empty) empty.hidden = shown !== 0;
+        }
+        window.__amorelliCount = apply;
+        hood.addEventListener('change', apply);
+        types.forEach(function (b) {
+          b.addEventListener('click', function () {
+            curType = b.getAttribute('data-type');
+            types.forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+            apply();
+          });
+        });
+        apply();
+      })();
+
+      /* ---- instant valuation estimator ---- */
+      (function () {
+        var d = document;
+        var go = d.getElementById('e-go');
+        if (!go) return;
+        go.addEventListener('click', function () {
+          var rate = parseFloat(d.getElementById('e-hood').value) || 0;
+          var mult = parseFloat(d.getElementById('e-type').value) || 1;
+          var sqft = parseFloat((d.getElementById('e-sqft').value || '').replace(/[^0-9.]/g, ''));
+          var sqftEl = d.getElementById('e-sqft');
+          if (!sqft || sqft <= 0) {
+            sqftEl.focus();
+            sqftEl.style.borderColor = '#c0392b';
+            setTimeout(function () { sqftEl.style.borderColor = ''; }, 1600);
+            return;
+          }
+          var est = rate * mult * sqft;
+          var lo = Math.round(est * 0.92 / 5000) * 5000;
+          var hi = Math.round(est * 1.08 / 5000) * 5000;
+          var fmt = function (n) { return '$' + n.toLocaleString('en-US'); };
+          d.getElementById('e-range').textContent = fmt(lo) + ' \u2013 ' + fmt(hi);
+          d.getElementById('e-out').hidden = false;
+          d.getElementById('e-out').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+        var full = d.getElementById('e-full');
+        if (full) full.addEventListener('click', function () {
+          var tab = d.getElementById('tab-sell');
+          if (tab) tab.click();
+          var addr = d.getElementById('s-addr');
+          if (addr) { addr.scrollIntoView({ behavior: 'smooth', block: 'center' }); addr.focus({ preventScroll: true }); }
+        });
       })();
 
     </script>
